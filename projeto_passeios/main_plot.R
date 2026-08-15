@@ -227,27 +227,23 @@ n <- 200
 m <- 1000
 
 trajetorias_cil <- simular_multiplas_trajetorias_ruido(n, m)
+trajetorias_cil <- simular_multiplos_passeio_aleatorio(n, m)
 
 # 6.1 Cilindros
-tempos_1          <- c(20, 60, 100, 140)
-limite_inferior_1 <- -0.5 * sqrt(tempos_1)
-limite_superior_1 <-  0.5 * sqrt(tempos_1)
+tempos          <- c(20, 100)
+limite_inferior <- c(-5, -20)
+limite_superior <- c( 3, -10)
 
-tempos_2          <- c(40, 80, 120, 160)
-limite_inferior_2 <- -0.5 * sqrt(tempos_2)
-limite_superior_2 <-  0.5 * sqrt(tempos_2)
+pertence <- verifica_cilindro_matriz(trajetorias_cil, tempos,
+                                        limite_inferior, limite_superior)
 
-pertence_1 <- verifica_cilindro_matriz(trajetorias_cil, tempos_1,
-                                        limite_inferior_1, limite_superior_1)
+pertence_grupo <- pertence
 
-pertence_2 <- verifica_cilindro_matriz(trajetorias_cil, tempos_2,
-                                        limite_inferior_2, limite_superior_2)
-
-pertence_grupo <- pertence_1 & pertence_2
+proporcao <- sum(pertence_grupo) / m
 
 cat("Número total de trajetórias:", m, "\n")
 cat("Número de trajetórias no grupo cilíndrico:", sum(pertence_grupo), "\n")
-cat("Proporção de trajetórias no grupo cilíndrico:", sum(pertence_grupo) / m, "\n")
+cat("Proporção de trajetórias no grupo cilíndrico:", proporcao, "\n")
 
 ## 6.2 Plot ----
 lista_df_cil <- vector("list", m)
@@ -261,9 +257,9 @@ for(i in 1:m){
 
 df_cil <- do.call(rbind, lista_df_cil)
 
-df_janelas <- data.frame(t   = c(tempos_1, tempos_2),
-                          inf = c(limite_inferior_1, limite_inferior_2),
-                          sup = c(limite_superior_1, limite_superior_2))
+df_janelas <- data.frame(t   = tempos,
+                          inf = limite_inferior,
+                          sup = limite_superior)
 
 cores <- c(
   "Fora do grupo cilíndrico"   = "gray50",
@@ -283,8 +279,8 @@ grafico_cilindros <-
                aes(x = t, xend = t, y = inf, yend = sup, color = "Janelas"),
                linewidth = 2) +
   scale_color_manual(values = cores, name = "Legenda") +
-  labs(title = "Passeio Aleatório e Grupo Cilíndrico (2 Cilindros)",
-       x = "Tempo (t)", y = "X_t") +
+  labs(title = "Processo Estocástico e Grupo Cilíndrico",
+       x = "Tempo (t)", y = "X_t", caption = paste("Prop:", proporcao)) +
   theme_minimal()
 
 grafico_cilindros
