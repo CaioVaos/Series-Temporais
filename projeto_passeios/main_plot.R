@@ -226,7 +226,6 @@ plot_variancia_gg(var_pa, referencia = sigma2 * (1:n), titulo = "Variância do P
 n <- 200
 m <- 1000
 
-trajetorias_cil <- simular_multiplas_trajetorias_ruido(n, m)
 trajetorias_cil <- simular_multiplos_passeio_aleatorio(n, m)
 
 # 6.1 Cilindros
@@ -267,8 +266,7 @@ cores <- c(
   "Janelas"                    = "blue"
 )
 
-grafico_cilindros <-
-  ggplot() +
+grafico_cilindros <- ggplot() +
   geom_line(data = subset(df_cil, !dentro),
             aes(x = tempo, y = valor, group = traj, color = "Fora do grupo cilíndrico"),
             alpha = 0.15) +
