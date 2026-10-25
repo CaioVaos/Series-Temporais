@@ -103,5 +103,96 @@
     "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
     "section": "Próximos passos: do esboço ao relatório e aos slides finais",
     "text": "Próximos passos: do esboço ao relatório e aos slides finais\n\n\naté 06/11/2026 Submeter o tema ao professor\n\n\n[prazo] Baixar os dados (Python)\n\n\n[prazo] Modelar ARIMA/SARIMA (R)\n\n\n[prazo] Escrever o relatório (LaTeX)\n\n\n[prazo] Finalizar os slides (25 min)\n\n\n\nPerguntas e discussão\n\n\nConsultor C · 1:00. Fechar com o cronograma e abrir para perguntas."
+  },
+  {
+    "objectID": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-as-campanhas-mesmo-no-pior-cenário-o-interesse-projetado-é-x-do-nível-pré-crise",
+    "href": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-as-campanhas-mesmo-no-pior-cenário-o-interesse-projetado-é-x-do-nível-pré-crise",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Recomendamos [manter / ajustar / pausar] as campanhas: mesmo no pior cenário, o interesse projetado é [X%] do nível pré-crise",
+    "text": "Recomendamos [manter / ajustar / pausar] as campanhas: mesmo no pior cenário, o interesse projetado é [X%] do nível pré-crise\n\nRESPOSTA · SUSTENTADA POR TRÊS PILARES [MANTER / AJUSTAR / PAUSAR] as campanhas de venda de passagens durante a crise\n\n\n\n\n1 · Impacto\n\n\n[±X%]\n\nYt após a crise vs. nível anterior\n\n\n\n2 · Recuperação\n\n\n[X%]\n\ndo nível pré-crise na previsão base\n\n\n\n3 · Risco\n\n\n[X%]\n\nno cenário pessimista (IC 95%)\n\n\n\nIntegrante 1 · 2,5 min. Entrego a resposta nos primeiros dois minutos: recomendamos o que está no topo e mostro que três pilares sustentam essa conclusão. Aponto que o pilar 1 mede o que aconteceu, o 2 projeta o que vem e o 3 mostra o pior caso."
+  },
+  {
+    "objectID": "Trabalho/index.html#em-meio-à-crise-a-alaska-precisa-decidir-se-sustenta-ou-suspende-as-campanhas-de-venda-de-passagens",
+    "href": "Trabalho/index.html#em-meio-à-crise-a-alaska-precisa-decidir-se-sustenta-ou-suspende-as-campanhas-de-venda-de-passagens",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Em meio à crise, a Alaska precisa decidir se sustenta ou suspende as campanhas de venda de passagens",
+    "text": "Em meio à crise, a Alaska precisa decidir se sustenta ou suspende as campanhas de venda de passagens\n\n\n\nS\n\n\nSITUAÇÃO\n\nA Alaska vende passagens com apoio de campanhas contínuas.\n\n\n\nC\n\n\nCOMPLICAÇÃO\n\n[Evento da crise] abala a reputação e gera incerteza sobre o retorno das campanhas.\n\n\n\nQ\n\n\nPERGUNTA\n\nManter ou pausar as campanhas durante a crise?\n\n\n\nA\n\n\nRESPOSTA\n\n[MANTER / AJUSTAR / PAUSAR], conforme a projeção SARIMA do interesse de busca.\n\n\n\nIntegrante 1 · 2,5 min. Conto a história em quatro passos: situação estável, a complicação (a crise, com data real a confirmar), a pergunta binária e a resposta que já adiantei. Explico por que o interesse de busca é um termômetro público e frequente da atenção à marca."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-dilema-se-decompõe-em-três-pilares-mece-cada-um-testado-por-uma-hipótese-sobre-a-série-yt",
+    "href": "Trabalho/index.html#o-dilema-se-decompõe-em-três-pilares-mece-cada-um-testado-por-uma-hipótese-sobre-a-série-yt",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O dilema se decompõe em três pilares MECE, cada um testado por uma hipótese sobre a série Yt",
+    "text": "O dilema se decompõe em três pilares MECE, cada um testado por uma hipótese sobre a série Yt\n\n\n\n\n\n%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#5B6B7A','primaryColor':'#F2F4F7','primaryTextColor':'#051C2C','primaryBorderColor':'#DCE6FF'}}}%%\ngraph LR\n  R[\"&lt;b&gt;Manter as campanhas&lt;br/&gt;na crise?&lt;/b&gt;\"]:::raiz\n  R --&gt; A[\"&lt;b&gt;1 · Impacto&lt;/b&gt;&lt;br/&gt;o que a crise fez?\"]\n  R --&gt; B[\"&lt;b&gt;2 · Recuperação&lt;/b&gt;&lt;br/&gt;o interesse volta?\"]\n  R --&gt; C[\"&lt;b&gt;3 · Risco&lt;/b&gt;&lt;br/&gt;quão incerto é o futuro?\"]\n  A --&gt; A1([\"&lt;b&gt;H1&lt;/b&gt; · Yt sofreu queda de nível&lt;br/&gt;após o evento (intervenção)\"]):::h\n  B --&gt; B1([\"&lt;b&gt;H2&lt;/b&gt; · Yt volta a ≥ limiar do nível&lt;br/&gt;pré-crise em h períodos (SARIMA)\"]):::h\n  C --&gt; C1([\"&lt;b&gt;H3&lt;/b&gt; · IC 95% inferior ≥ limiar e&lt;br/&gt;resíduos são ruído branco\"]):::h\n  classDef raiz fill:#051C2C,color:#fff,stroke:#051C2C\n  classDef h fill:#DCE6FF,color:#051C2C,stroke:#2251FF\n\n\n\n\n\n\n\nIntegrante 1 · 2,5 min. Mostro a árvore MECE: passado, futuro e incerteza não se sobrepõem e juntos cobrem a decisão. Cada pilar tem uma hipótese testável por série temporal; o plano completo está no apêndice."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-interesse-por-alaska-airlines-variou-x-logo-após-a-crise-frente-ao-nível-anterior",
+    "href": "Trabalho/index.html#o-interesse-por-alaska-airlines-variou-x-logo-após-a-crise-frente-ao-nível-anterior",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O interesse por “Alaska Airlines” variou [±X%] logo após a crise frente ao nível anterior",
+    "text": "O interesse por “Alaska Airlines” variou [±X%] logo após a crise frente ao nível anterior\n\n\n\nExhibit 1 · Interesse de busca (índice 0–100); linha vermelha: início da crise\n\n\nGráfico · Série Yt com a crise marcadainserir figura aqui\n\n\nFonte: Google Trends (coleta em Python OOP); análise do grupo\n\n\n\n\nNível pré-crise: [•] pontos\n\n\nObservações: [•]\n\n\nOutliers (IQR): [•]\n\n\n\n\nIntegrante 2 · 2,5 min. Explico de onde vêm os dados (Google Trends, coleta em Python) e o tratamento. Peço que olhem a linha vermelha: o que mudou de nível antes e depois. Não detalho números além do que está no gráfico."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-diferenciação-d-d-estabiliza-a-série-e-os-correlogramas-indicam-as-ordens-candidatas",
+    "href": "Trabalho/index.html#a-diferenciação-d-d-estabiliza-a-série-e-os-correlogramas-indicam-as-ordens-candidatas",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A diferenciação (d = [•], D = [•]) estabiliza a série e os correlogramas indicam as ordens candidatas",
+    "text": "A diferenciação (d = [•], D = [•]) estabiliza a série e os correlogramas indicam as ordens candidatas\n\n\n\nExhibit 2 · ACF\n\n\nGráfico · ACF da série estacionáriainserir figura aqui\n\n\n\n\nExhibit 3 · PACF\n\n\nGráfico · PACF da série estacionáriainserir figura aqui\n\n\n\n\nExhibit 4 · Testes ADF e KPSS\n\n\nTabela · ADF e KPSSinserir tabela aqui\n\n\n\n\nImplicação: a série diferenciada é estacionária; ACF e PACF definem p, q, P e Q.\n\n\nIntegrante 2 · 2,5 min. Justifico a diferenciação com os testes: ADF rejeita raiz unitária e KPSS não rejeita estacionariedade. Leio o correlograma como pistas das ordens, que depois a comparação por AIC confirma."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-modelo-sarimapdqpdqs-minimiza-o-aic-e-a-validação-dos-resíduos-ljung-box-p-sustenta-as-projeções",
+    "href": "Trabalho/index.html#o-modelo-sarimapdqpdqs-minimiza-o-aic-e-a-validação-dos-resíduos-ljung-box-p-sustenta-as-projeções",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O modelo [SARIMA(p,d,q)(P,D,Q)[s]] minimiza o [AIC] e a validação dos resíduos (Ljung-Box p = [•]) [sustenta as projeções]",
+    "text": "O modelo [SARIMA(p,d,q)(P,D,Q)[s]] minimiza o [AIC] e a validação dos resíduos (Ljung-Box p = [•]) [sustenta as projeções]\n\n\n\nExhibit 5 · Modelos candidatos (menor critério = campeão)\n\n\nTabela · AIC, BIC e RMSE dos candidatosinserir tabela aqui\n\n\n\n\nExhibit 6 · Diagnóstico dos resíduos\n\nLjung-Box p = [•] · Shapiro p = [•] ::: grid2\n\nACF dos resíduosinserir figura aqui\n\n\nQQ dos resíduosinserir figura aqui\n\n\n\n::::\n\nImplementação: R procedural (forecast::Arima, tseries::adf.test) · coleta em Python orientado a objetos (pytrends)\n\n\nIntegrante 2 · 3 min. Comparamos uma grade de modelos SARIMA e escolhemos o de menor critério de informação. Mostro que os resíduos se comportam como ruído branco, o que dá confiança às projeções. Cito o código: funções em R procedural e coletor em Python OOP."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-projeção-sarima-indica-x-do-nível-pré-crise-em-h-períodos-entre-li-e-ls-no-ic-95",
+    "href": "Trabalho/index.html#a-projeção-sarima-indica-x-do-nível-pré-crise-em-h-períodos-entre-li-e-ls-no-ic-95",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A projeção SARIMA indica [X%] do nível pré-crise em [h] períodos, entre [LI%] e [LS%] no IC 95%",
+    "text": "A projeção SARIMA indica [X%] do nível pré-crise em [h] períodos, entre [LI%] e [LS%] no IC 95%\n\nExhibit 7 · Série observada e previsão com IC 80% e 95%; pontilhado: nível pré-crise\n\n\nGráfico · Previsão com intervalos de confiançainserir figura aqui\n\n\n\nOtimista (IC 95% superior)\n\n[X%]\n\n\n\nBase (previsão central)\n\n[X%]\n\n\n\nPessimista (IC 95% inferior)\n\n[X%]\n\n\n\n\nIntegrante 3 · 2,5 min. Mostro a previsão central e a faixa de incerteza. Defino os três cenários a partir do intervalo de 95% e comparo com o nível pré-crise, a linha pontilhada. A largura da faixa é o risco da decisão."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-cenário-pessimista-define-o-risco-a-decisão-coerente-com-a-demanda-projetada-é-manter-ajustar-pausar",
+    "href": "Trabalho/index.html#o-cenário-pessimista-define-o-risco-a-decisão-coerente-com-a-demanda-projetada-é-manter-ajustar-pausar",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O cenário pessimista define o risco: a decisão coerente com a demanda projetada é [manter / ajustar / pausar]",
+    "text": "O cenário pessimista define o risco: a decisão coerente com a demanda projetada é [manter / ajustar / pausar]\n\nExhibit 8 · Cenários de Yt e leitura de negócio (limiar de decisão: [90]% do nível pré-crise)\n\n\n\n\n\n\n\n\n\n\nCenário\nYt projetado (% do pré-crise)\nLeitura de negócio\nDecisão coerente\n\n\n\n\nOtimista (IC 95% sup.)\n[X%]\n[a preencher]\n[a preencher]\n\n\nBase (previsão central)\n[X%]\n[a preencher]\n[a preencher]\n\n\nPessimista (IC 95% inf.)\n[X%]\n[a preencher]\n[a preencher]\n\n\n\n\nRegra de decisão: manter se o pior cenário já atinge o limiar; ajustar se só o base atinge; pausar caso contrário.\n\n\nIntegrante 3 · 3 min. Traduzo a estatística em negócio: se o interesse recupera, a campanha amplifica demanda; se não, o retorno é incerto. Explico a regra de decisão e o limiar, que o grupo pode ajustar com o gestor."
+  },
+  {
+    "objectID": "Trabalho/index.html#um-plano-em-três-fases-implementa-a-decisão-e-limita-o-downside-com-gatilhos-objetivos-de-revisão",
+    "href": "Trabalho/index.html#um-plano-em-três-fases-implementa-a-decisão-e-limita-o-downside-com-gatilhos-objetivos-de-revisão",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Um plano em três fases implementa a decisão e limita o downside com gatilhos objetivos de revisão",
+    "text": "Um plano em três fases implementa a decisão e limita o downside com gatilhos objetivos de revisão\n\n\n\nFASE 1 · AGORA\n\n\n01\n\nExecutar [decisão] e acompanhar Yt toda semana.\n\n\n\nFASE 2 · GATILHO\n\n\n02\n\nSe Yt ficar abaixo de [90]% do pré-crise por [3] períodos, revisar a decisão.\n\n\n\nFASE 3 · REAJUSTE\n\n\n03\n\nReestimar o modelo a cada [4] semanas e atualizar os cenários.\n\n\n\nIntegrante 3 · 2,5 min. Apresento o plano em três fases: executar, monitorar com gatilho objetivo e reestimar o modelo. Isso transforma a recomendação em algo operacional e protege o downside."
+  },
+  {
+    "objectID": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-a-evidência-temporal-sustenta-a-decisão-e-os-gatilhos-protegem-o-downside",
+    "href": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-a-evidência-temporal-sustenta-a-decisão-e-os-gatilhos-protegem-o-downside",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Recomendamos [manter / ajustar / pausar]: a evidência temporal sustenta a decisão e os gatilhos protegem o downside",
+    "text": "Recomendamos [manter / ajustar / pausar]: a evidência temporal sustenta a decisão e os gatilhos protegem o downside\n\n\n\n1Impacto\n\n[±X%] no interesse após a crise\n\n\n\n2Recuperação\n\n[X%] do pré-crise (base)\n\n\n\n3Risco\n\n[X%] no pior cenário\n\n\n\nPerguntas e discussão\n\n\nTodos os integrantes · 1 min. Repetimos a recomendação em uma frase, agradecemos e abrimos para perguntas. A matriz de Q&A e o plano de trabalho analítico estão no apêndice."
+  },
+  {
+    "objectID": "Trabalho/index.html#apêndice-a-plano-de-trabalho-analítico-hypothesis-driven",
+    "href": "Trabalho/index.html#apêndice-a-plano-de-trabalho-analítico-hypothesis-driven",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Apêndice A · Plano de trabalho analítico (hypothesis-driven)",
+    "text": "Apêndice A · Plano de trabalho analítico (hypothesis-driven)\n\n\n\n\n\n\n\n\n\n\n\nPilar\nPergunta\nHipótese testável\nMétodo\nFonte\nExhibit\n\n\n\n\n1 · Impacto\nA crise reduziu o interesse?\nH1: degrau negativo em Yt após o evento\nIntervenção ARIMA, ADF\nGoogle Trends\n1\n\n\n2 · Recuperação\nO interesse volta ao nível pré-crise?\nH2: previsão base ≥ limiar em h períodos\nSARIMA com IC 95%\nGoogle Trends\n7\n\n\n3 · Risco\nA incerteza compromete a decisão?\nH3: IC inferior ≥ limiar; resíduos ruído branco\nLjung-Box, ACF/PACF\nGoogle Trends\n5, 6, 8"
+  },
+  {
+    "objectID": "Trabalho/index.html#apêndice-b-matriz-de-perguntas-e-respostas-da-banca",
+    "href": "Trabalho/index.html#apêndice-b-matriz-de-perguntas-e-respostas-da-banca",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Apêndice B · Matriz de perguntas e respostas da banca",
+    "text": "Apêndice B · Matriz de perguntas e respostas da banca\n\n\n\n\n\n\n\n\nPergunta provável\nVulnerabilidade\nResposta estratégica\n\n\n\n\nPor que SARIMA e não suavização simples?\nComplexidade do modelo\nA comparação por AIC/BIC e os resíduos ruído branco justificam a escolha; modelos simples deixam autocorrelação.\n\n\nE se o interesse cair ao limite inferior do IC 95%?\nCenário de estresse\nEsse é o cenário pessimista do slide 8; a regra de decisão e os gatilhos do slide 10 tratam esse risco.\n\n\nInteresse de busca representa vendas?\nValidade da variável\nYt é proxy de atenção, não de receita; por isso usamos gatilhos e reestimação periódica.\n\n\nA crise é um choque único?\nQuebra estrutural\nTestamos o degrau com intervenção (H1) e monitoramos o modelo a cada [4] semanas."
+  },
+  {
+    "objectID": "Trabalho/index.html#apêndice-c-diagnóstico-estatístico-completo",
+    "href": "Trabalho/index.html#apêndice-c-diagnóstico-estatístico-completo",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Apêndice C · Diagnóstico estatístico completo",
+    "text": "Apêndice C · Diagnóstico estatístico completo\n\nTabela · diagnóstico (ADF, KPSS, Ljung-Box, parâmetros do modelo)inserir tabela aqui"
   }
 ]

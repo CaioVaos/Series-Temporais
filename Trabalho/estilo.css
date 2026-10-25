@@ -8,7 +8,6 @@
 
 /* tracker + selo preliminar */
 .reveal .slides section[data-tracker]::before{content:attr(data-tracker);position:absolute;top:-6px;left:0;font:700 .38em var(--sans);letter-spacing:.14em;color:var(--azul)}
-.reveal .slides section.level2:not(.dark):not(.sem-selo)::after{content:"PRELIMINAR";position:absolute;top:-10px;right:0;font:700 .32em var(--sans);letter-spacing:.1em;color:var(--cinza);border:1px solid var(--cinza);padding:2px 14px}
 .reveal .slides section.dark{color:#fff}.reveal .slides section.dark h2,.reveal .slides section.dark h3{color:#fff}
 .reveal .slides section.dark[data-tracker]::before{color:var(--ciano)}
 .reveal .slides section.dark::after{color:#8FB0D8!important;border-color:#8FB0D8!important}
@@ -81,3 +80,20 @@
 .reveal .mermaid svg{max-width:100%;height:auto}
 .fonte{position:absolute;bottom:-34px;left:0;font-size:.34em;color:var(--cinza)}
 .passos{counter-reset:p}.passo{font-size:.62em}
+
+/* ===== Slide Final ===== */
+.reveal .final-slide {
+  background: url("media/final.png");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+.reveal section.title-slide.final-slide,
+.reveal section.title-slide.final-slide h1 {
+  background: none !important;
+  background-color: transparent !important;
+  font-size: 2.5em !important;
+  background-image: none !important;
+}

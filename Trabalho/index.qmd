@@ -1,9 +1,11 @@
 ---
 title: "Alaska Airlines: manter as campanhas de vendas durante a crise?"
-subtitle: "Consultoria estratégica em séries temporais · GET00127"
-author: "[Nome 1] · [Nome 2] · [Nome 3]"
-date: "Esboço inicial · 24/10/2026"
+subtitle: "Consultoria estratégica"
+author: "Caio Salviano · Pedro Frazao · RIchard Melo"
+date: 2026-10-24
+date-format: "DD/MM/YYYY"
 lang: pt-BR
+institute: "<span style='color: #ffffff;'>Universidade Federal Fluminense</span>"
 format:
   revealjs:
     theme: default
@@ -19,7 +21,7 @@ format:
     center: false
     menu: true
     preview-links: false
-    footer: "Alaska Airlines · Campanhas de vendas na crise | GET00127 · Esboço inicial"
+    footer: "Alaska Airlines · Campanhas de vendas na crise"
     embed-resources: true
     title-slide-attributes:
       data-background-image: img/capa.png
@@ -527,3 +529,5 @@ ajuste <- Arima(serie, order = c(p, d, q), seasonal = c(P, D, Q))
 checkresiduals(ajuste)                                  # diagnóstico (Ljung-Box)
 prev   <- forecast(ajuste, h = 26, level = c(80, 95))   # previsão com IC
 ```
+
+# Fim. {.final-slide}
