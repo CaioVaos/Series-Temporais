@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "Trabalho/index.html#a-pergunta",
+    "href": "Trabalho/index.html#a-pergunta",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A pergunta",
+    "text": "A pergunta\n\nManter ou pausar?\n\n\nConsultor A · 1:00 (junto com o próximo slide). Abrir com a pergunta e só depois revelar o contexto."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-pergunta-1",
+    "href": "Trabalho/index.html#a-pergunta-1",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A pergunta",
+    "text": "A pergunta\n\nManter ou pausar?\n\n\nAs campanhas de venda de passagens da Alaska Airlines durante a crise.\n\n\nYt · interesse de buscajan/2022 → out/2026ARIMA / SARIMAdecisão baseada em dados\n\n\nConsultor A · 1:00. A decisão será tomada com uma série temporal pública, sem intuição."
+  },
+  {
+    "objectID": "Trabalho/index.html#resposta-primeiro-manter-ajustar-pausar-sustentada-por-três-argumentos-quantitativos",
+    "href": "Trabalho/index.html#resposta-primeiro-manter-ajustar-pausar-sustentada-por-três-argumentos-quantitativos",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Resposta primeiro: [manter | ajustar | pausar], sustentada por três argumentos quantitativos",
+    "text": "Resposta primeiro: [manter | ajustar | pausar], sustentada por três argumentos quantitativos\n\n\n\nRESPOSTA · A DEFINIR APÓS A ANÁLISE [MANTER | AJUSTAR | PAUSAR] as campanhas durante a crise\n\n\n\n\n1Demanda\n\nImpacto da crise no interesse por “Alaska Airlines”: [a preencher]\n\n\n\n2Previsão\n\nTrajetória projetada pelo modelo SARIMA: [a preencher]\n\n\n\n3Decisão\n\nCenários de manter, ajustar ou pausar e seus riscos: [a preencher]\n\n\n\nConsultor A · 2:00. Princípio da Pirâmide: resposta no topo; os três argumentos aparecem um a um."
+  },
+  {
+    "objectID": "Trabalho/index.html#em-plena-crise-a-alaska-decide-se-mantém-o-esforço-de-vendas",
+    "href": "Trabalho/index.html#em-plena-crise-a-alaska-decide-se-mantém-o-esforço-de-vendas",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Em plena crise, a Alaska decide se mantém o esforço de vendas",
+    "text": "Em plena crise, a Alaska decide se mantém o esforço de vendas\n\n\nJan/2024 Incidente do Voo 1282 (confirmar)\n\n\n[data] [evento da crise]\n\n\n[data] [evento da crise]\n\n\n[data] [evento da crise]\n\n\n[data] [evento da crise]\n\n\n\n\n\n\n\nO dilema. Manter as campanhas durante a crise ou pausá-las até a reputação se recuperar?\n\n\n\n\n\n\n\nPor que séries temporais. O interesse de busca é um termômetro público e frequente da atenção ao nome da companhia.\n\n\n\n\n\nConsultor A · 2:00. Mapear eventos reais e datas; o Voo 1282 é só candidato."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-dilema-se-decompõe-em-três-perguntas-mutuamente-exclusivas-e-coletivamente-exaustivas",
+    "href": "Trabalho/index.html#o-dilema-se-decompõe-em-três-perguntas-mutuamente-exclusivas-e-coletivamente-exaustivas",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O dilema se decompõe em três perguntas mutuamente exclusivas e coletivamente exaustivas",
+    "text": "O dilema se decompõe em três perguntas mutuamente exclusivas e coletivamente exaustivas\n\n\n\n\n\n%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#5B6B7A','primaryColor':'#F2F4F7','primaryTextColor':'#051C2C','primaryBorderColor':'#DCE6FF'}}}%%\ngraph LR\n  R[\"&lt;b&gt;Manter as campanhas&lt;br/&gt;durante a crise?&lt;/b&gt;\"]:::raiz\n  R --&gt; A[\"&lt;b&gt;A · Impacto&lt;/b&gt;&lt;br/&gt;o que a crise fez&lt;br/&gt;com o interesse?\"]\n  R --&gt; B[\"&lt;b&gt;B · Trajetória&lt;/b&gt;&lt;br/&gt;o interesse vai&lt;br/&gt;se recuperar?\"]\n  R --&gt; C[\"&lt;b&gt;C · Decisão&lt;/b&gt;&lt;br/&gt;qual ação compensa&lt;br/&gt;em cada cenário?\"]\n  A --&gt; A1([\"nível, tendência&lt;br/&gt;e quebras de Yt\"]):::med\n  B --&gt; B1([\"previsão SARIMA&lt;br/&gt;com IC\"]):::med\n  C --&gt; C1([\"manter × ajustar&lt;br/&gt;× pausar\"]):::med\n  classDef raiz fill:#051C2C,color:#fff,stroke:#051C2C\n  classDef med fill:#DCE6FF,color:#051C2C,stroke:#2251FF\n\n\n\n\n\n\n\nConsultor A · 1:30. Árvore MECE. Validar exclusividade e exaustividade dos três ramos."
+  },
+  {
+    "objectID": "Trabalho/index.html#três-hipóteses-orientam-a-análise-e-serão-confirmadas-ou-refutadas-pelos-dados",
+    "href": "Trabalho/index.html#três-hipóteses-orientam-a-análise-e-serão-confirmadas-ou-refutadas-pelos-dados",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Três hipóteses orientam a análise e serão confirmadas ou refutadas pelos dados",
+    "text": "Três hipóteses orientam a análise e serão confirmadas ou refutadas pelos dados\n\n\nH1 A crise provocou uma quebra no nível de interesse por “Alaska Airlines” Teste: análise de intervenção e quebra estrutural na série Yt A testar\n\n\nH2 O interesse volta ao padrão histórico em até [h] períodos Teste: previsão SARIMA com IC de 80% e 95% A testar\n\n\nH3 Manter as campanhas compensa mais do que pausá-las Teste: comparação de cenários (manter × ajustar × pausar) A testar\n\n\n\nConsultor A · 1:30. Abordagem hypothesis-driven. Definir o horizonte [h] da H2 e o critério da H3."
+  },
+  {
+    "objectID": "Trabalho/index.html#dados-públicos-e-um-pipeline-reproduzível-sustentam-a-série-yt",
+    "href": "Trabalho/index.html#dados-públicos-e-um-pipeline-reproduzível-sustentam-a-série-yt",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Dados públicos e um pipeline reproduzível sustentam a série Yt",
+    "text": "Dados públicos e um pipeline reproduzível sustentam a série Yt\n\n\n\n\n\n%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#5B6B7A'}}}%%\ngraph LR\n  P[\"&lt;b&gt;Python&lt;/b&gt;&lt;br/&gt;download dos dados\"]:::t --&gt; D[\"&lt;b&gt;CSV bruto&lt;/b&gt;&lt;br/&gt;01/01/2022–23/10/2026\"]:::d --&gt; R[\"&lt;b&gt;R&lt;/b&gt;&lt;br/&gt;ARIMA / SARIMA\"]:::t --&gt; Q[\"&lt;b&gt;Quarto&lt;/b&gt;&lt;br/&gt;slides + relatório\"]:::t\n  classDef t fill:#051C2C,color:#fff,stroke:#051C2C\n  classDef d fill:#DCE6FF,color:#051C2C,stroke:#2251FF\n\n\n\n\n\n\n\n\n\n\n\n\n\nItem\nDefinição\n\n\n\n\nVariável Yt\nÍndice de interesse (0 a 100) do Google Trends para “Alaska Airlines”\n\n\nAlternativa\nQuantidade de notícias associadas ao termo (a avaliar)\n\n\nFrequência · Região\n[semanal ou mensal] · [EUA ou mundial] — definir\n\n\nTratamento\n[faltantes, outliers e suavização] — definir\n\n\n\n\nConsultor B · 1:30. Definir frequência, região e tratamento; decidir sobre série de notícias complementar."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-série-yt-exibe-tendência-sazonalidade-e-choques-a-descrever",
+    "href": "Trabalho/index.html#a-série-yt-exibe-tendência-sazonalidade-e-choques-a-descrever",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A série Yt exibe [tendência, sazonalidade e choques: a descrever]",
+    "text": "A série Yt exibe [tendência, sazonalidade e choques: a descrever]\n\n\n\nGráfico · Série Yt com eventos da crisepreenche sozinho quando dados/yt_alaska.csv existir\n\n\n\n\n1Nível e tendência\n\n[a descrever]\n\n\n\n2Sazonalidade\n\n[a descrever]\n\n\n\n3Choques e eventos\n\n[a descrever]\n\n\n\nFonte: Google Trends; elaboração própria\n\n\nConsultor B · 1:30. O gráfico se preenche sozinho quando dados/yt_alaska.csv existir."
+  },
+  {
+    "objectID": "Trabalho/index.html#estacionariedade-e-acfpacf-definem-as-ordens-candidatas-do-modelo-a-confirmar",
+    "href": "Trabalho/index.html#estacionariedade-e-acfpacf-definem-as-ordens-candidatas-do-modelo-a-confirmar",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Estacionariedade e ACF/PACF definem as ordens candidatas do modelo [a confirmar]",
+    "text": "Estacionariedade e ACF/PACF definem as ordens candidatas do modelo [a confirmar]\n\nACFPACFADF e KPSSDecomposição\n\n\n\nGráfico · ACF da série diferenciadapreenche sozinho quando dados/yt_alaska.csv existir\n\n\n\n\nGráfico · PACF da série diferenciadapreenche sozinho quando dados/yt_alaska.csv existir\n\n\n\n\nTabela · testes ADF e KPSSpreenche sozinho quando dados/yt_alaska.csv existir\n\n\n\n\nGráfico · decomposição (tendência, sazonalidade, resíduo)preenche sozinho quando dados/yt_alaska.csv existir\n\n\n\n\n\nConsultor B · 2:00. Clique nas abas: ACF, PACF, testes e decomposição."
+  },
+  {
+    "objectID": "Trabalho/index.html#o-modelo-arimasarima-escolhido-deve-passar-no-diagnóstico-de-resíduos",
+    "href": "Trabalho/index.html#o-modelo-arimasarima-escolhido-deve-passar-no-diagnóstico-de-resíduos",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "O modelo ARIMA/SARIMA escolhido deve passar no diagnóstico de resíduos",
+    "text": "O modelo ARIMA/SARIMA escolhido deve passar no diagnóstico de resíduos\n\n\n\n\n\nModelo\nAIC\nBIC\nRMSE\n\n\n\n\nCandidato 1 (p,d,q)(P,D,Q)s\n—\n—\n—\n\n\nCandidato 2 (p,d,q)(P,D,Q)s\n—\n—\n—\n\n\nCandidato 3 (p,d,q)(P,D,Q)s\n—\n—\n—\n\n\nReferência: auto.arima\n—\n—\n—\n\n\n\n\n\n\nCritério de escolha. [definir: menor AIC/BIC, resíduos como ruído branco e boa validação fora da amostra]\n\n\n\n\n\nGráfico · resíduos, ACF dos resíduos e Ljung-Boxpreenche sozinho quando dados/yt_alaska.csv existir\n\n\n\nConsultor B · 2:00. Defina ajuste no chunk de configuração para o diagnóstico aparecer aqui."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-previsão-projeta-recuperação-estagnação-do-interesse-nos-próximos-h-períodos",
+    "href": "Trabalho/index.html#a-previsão-projeta-recuperação-estagnação-do-interesse-nos-próximos-h-períodos",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A previsão projeta [recuperação | estagnação] do interesse nos próximos [h] períodos",
+    "text": "A previsão projeta [recuperação | estagnação] do interesse nos próximos [h] períodos\n\nGráfico · série observada + previsão com IC de 80% e 95%preenche sozinho quando dados/yt_alaska.csv existir\n\n\n\nCenário otimista\n\n[valor]\n\n\n\nCenário base\n\n[valor]\n\n\n\nCenário pessimista\n\n[valor]\n\n\n\n\nFonte: Google Trends; modelagem do grupo (R)\n\n\nConsultor B · 1:30. Três trajetórias a partir dos intervalos de confiança."
+  },
+  {
+    "objectID": "Trabalho/index.html#três-cenários-permitem-comparar-manter-ajustar-e-pausar-as-campanhas",
+    "href": "Trabalho/index.html#três-cenários-permitem-comparar-manter-ajustar-e-pausar-as-campanhas",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Três cenários permitem comparar manter, ajustar e pausar as campanhas",
+    "text": "Três cenários permitem comparar manter, ajustar e pausar as campanhas\n\nManterAjustarPausar\n\n\n\n\n\nAção\n\nCampanhas no ritmo atual\n\n\n\nEfeito esperado\n\n[a preencher]\n\n\n\nRisco · gatilho de revisão\n\n[a preencher]\n\n\n\n\n\n\n\nAção\n\nAjustar mensagem e intensidade\n\n\n\nEfeito esperado\n\n[a preencher]\n\n\n\nRisco · gatilho de revisão\n\n[a preencher]\n\n\n\n\n\n\n\nAção\n\nSuspender até a normalização\n\n\n\nEfeito esperado\n\n[a preencher]\n\n\n\nRisco · gatilho de revisão\n\n[a preencher]\n\n\n\n\n\n\nConsultor C · 2:30. Percorra as três abas e compare efeito, risco e gatilho sob os cenários projetados."
+  },
+  {
+    "objectID": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-as-campanhas-porque-razão-principal",
+    "href": "Trabalho/index.html#recomendamos-manter-ajustar-pausar-as-campanhas-porque-razão-principal",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Recomendamos [manter | ajustar | pausar] as campanhas porque [razão principal]",
+    "text": "Recomendamos [manter | ajustar | pausar] as campanhas porque [razão principal]\n\n[MANTER | AJUSTAR | PAUSAR]\n\n\n\n\n1Demanda\n\n[a preencher]\n\n\n\n2Previsão\n\n[a preencher]\n\n\n\n3Risco e custo\n\n[a preencher]\n\n\n\nCONDIÇÕES PARA REVISAR A DECISÃO [gatilhos e prazo de revisão]\n\n\nConsultor C · 2:30. Slide central da decisão."
+  },
+  {
+    "objectID": "Trabalho/index.html#a-recomendação-depende-de-premissas-e-limitações-que-precisam-ser-monitoradas",
+    "href": "Trabalho/index.html#a-recomendação-depende-de-premissas-e-limitações-que-precisam-ser-monitoradas",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "A recomendação depende de premissas e limitações que precisam ser monitoradas",
+    "text": "A recomendação depende de premissas e limitações que precisam ser monitoradas\n\n\n\n\n\nGoogle Trends é um índice relativo de interesse, não de vendas.\n\n\n\n\n\n\nPossível quebra estrutural após a crise.\n\n\n\n\n\n\nA incerteza da previsão cresce com o horizonte.\n\n\n\n\n\n\nO termo pode refletir buscas que não indicam intenção de compra.\n\n\n\n\n\n\nGatilhos de monitoramento\n\n\n[Indicador 1 e limite de alerta]\n[Indicador 2 e limite de alerta]\n[Frequência de revisão da decisão]\n\n\n\n\nConsultor C · 2:00. Definir indicadores e limites de alerta."
+  },
+  {
+    "objectID": "Trabalho/index.html#próximos-passos-do-esboço-ao-relatório-e-aos-slides-finais",
+    "href": "Trabalho/index.html#próximos-passos-do-esboço-ao-relatório-e-aos-slides-finais",
+    "title": "Alaska Airlines: manter as campanhas de vendas durante a crise?",
+    "section": "Próximos passos: do esboço ao relatório e aos slides finais",
+    "text": "Próximos passos: do esboço ao relatório e aos slides finais\n\n\naté 06/11/2026 Submeter o tema ao professor\n\n\n[prazo] Baixar os dados (Python)\n\n\n[prazo] Modelar ARIMA/SARIMA (R)\n\n\n[prazo] Escrever o relatório (LaTeX)\n\n\n[prazo] Finalizar os slides (25 min)\n\n\n\nPerguntas e discussão\n\n\nConsultor C · 1:00. Fechar com o cronograma e abrir para perguntas."
+  }
+]

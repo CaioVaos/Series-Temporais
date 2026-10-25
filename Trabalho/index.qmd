@@ -1,0 +1,529 @@
+---
+title: "Alaska Airlines: manter as campanhas de vendas durante a crise?"
+subtitle: "Consultoria estratégica em séries temporais · GET00127"
+author: "[Nome 1] · [Nome 2] · [Nome 3]"
+date: "Esboço inicial · 24/10/2026"
+lang: pt-BR
+format:
+  revealjs:
+    theme: default
+    css: estilo.css
+    width: 1600
+    height: 900
+    margin: 0.07
+    transition: slide
+    background-transition: fade
+    slide-number: c/t
+    progress: true
+    hash: true
+    center: false
+    menu: true
+    preview-links: false
+    footer: "Alaska Airlines · Campanhas de vendas na crise | GET00127 · Esboço inicial"
+    embed-resources: true
+    title-slide-attributes:
+      data-background-image: img/capa.png
+      data-background-size: cover
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+# ---- configuração (ajuste aqui; os slides se preenchem sozinhos quando houver dados) ----
+library(ggplot2)
+pal <- c(navy = "#051C2C", azul = "#2251FF", ciano = "#00A9F4", verm = "#C8102E", cinza = "#5B6B7A")
+tema <- theme_minimal(base_size = 22) +
+  theme(panel.grid.minor = element_blank(), plot.title.position = "plot",
+        text = element_text(color = pal[["navy"]]), axis.title = element_text(color = pal[["cinza"]]))
+FREQ    <- 52                                  # 52 = semanal | 12 = mensal
+H       <- 26                                  # horizonte da previsão
+arq     <- "dados/yt_alaska.csv"               # colunas: data, interesse (gerado pelo Python)
+eventos <- as.Date("2024-01-05")               # datas da crise (ajustar / acrescentar)
+tem_dados <- file.exists(arq)
+ajuste <- NULL                                 # definir: forecast::Arima(serie, order = c(p,d,q), seasonal = c(P,D,Q))
+if (tem_dados) {
+  library(forecast); library(tseries)
+  yt <- read.csv(arq); yt$data <- as.Date(yt$data)
+  serie <- ts(yt$interesse, frequency = FREQ)
+}
+ph <- function(rotulo, cls = "") cat(sprintf(
+  '<div class="ph %s"><b>%s</b><small>preenche sozinho quando %s existir</small></div>', cls, rotulo, arq))
+```
+
+## A pergunta {.dark .sem-titulo auto-animate="true" background-gradient="linear-gradient(135deg,#051C2C 0%,#0A2E73 60%,#1A47C4 100%)"}
+
+::: {.hero data-id="pergunta" style="margin-top:230px;font-size:4.2em"}
+Manter ou pausar?
+:::
+
+::: notes
+Consultor A · 1:00 (junto com o próximo slide). Abrir com a pergunta e só depois revelar o contexto.
+:::
+
+## A pergunta {.dark .sem-titulo auto-animate="true" background-gradient="linear-gradient(135deg,#051C2C 0%,#0A2E73 60%,#1A47C4 100%)"}
+
+::: {.hero data-id="pergunta" style="margin-top:20px;font-size:2.6em"}
+Manter ou pausar?
+:::
+
+::: {style="font-size:1.05em;width:70%;margin-top:30px"}
+As campanhas de venda de passagens da **Alaska Airlines** durante a crise.
+:::
+
+::: chips
+<span>Yt · interesse de busca</span><span>jan/2022 → out/2026</span><span>ARIMA / SARIMA</span><span>decisão baseada em dados</span>
+:::
+
+::: notes
+Consultor A · 1:00. A decisão será tomada com uma série temporal pública, sem intuição.
+:::
+
+## Resposta primeiro: [manter \| ajustar \| pausar], sustentada por três argumentos quantitativos {data-tracker="RESUMO EXECUTIVO"}
+
+:::: {.columns}
+::: {.column width="42%"}
+::: resposta
+<small>RESPOSTA · A DEFINIR APÓS A ANÁLISE</small>
+**\[MANTER \| AJUSTAR \| PAUSAR\]** as campanhas durante a crise
+:::
+:::
+::: {.column width="58%"}
+::: {.card .fragment}
+<h4><span class="num">1</span>Demanda</h4>
+Impacto da crise no interesse por "Alaska Airlines": \[a preencher\]
+:::
+::: {.card .fragment}
+<h4><span class="num">2</span>Previsão</h4>
+Trajetória projetada pelo modelo SARIMA: \[a preencher\]
+:::
+::: {.card .fragment}
+<h4><span class="num">3</span>Decisão</h4>
+Cenários de manter, ajustar ou pausar e seus riscos: \[a preencher\]
+:::
+:::
+::::
+
+::: notes
+Consultor A · 2:00. Princípio da Pirâmide: resposta no topo; os três argumentos aparecem um a um.
+:::
+
+# O problema {data-num="01" background-image="img/capa.png" background-size="260%" background-position="8% 92%"}
+
+Uma crise, uma decisão comercial e três perguntas para respondê-la.
+
+## Em plena crise, a Alaska decide se mantém o esforço de vendas {data-tracker="O PROBLEMA"}
+
+::: timeline
+::: {.tl .crise .fragment}
+**Jan/2024**
+Incidente do Voo 1282 (confirmar)
+:::
+::: {.tl .fragment}
+**\[data\]**
+\[evento da crise\]
+:::
+::: {.tl .fragment}
+**\[data\]**
+\[evento da crise\]
+:::
+::: {.tl .fragment}
+**\[data\]**
+\[evento da crise\]
+:::
+::: {.tl .fragment}
+**\[data\]**
+\[evento da crise\]
+:::
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.callout-warning appearance="minimal"}
+**O dilema.** Manter as campanhas durante a crise ou pausá-las até a reputação se recuperar?
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-note appearance="minimal"}
+**Por que séries temporais.** O interesse de busca é um termômetro público e frequente da atenção ao nome da companhia.
+:::
+:::
+::::
+
+::: notes
+Consultor A · 2:00. Mapear eventos reais e datas; o Voo 1282 é só candidato.
+:::
+
+## O dilema se decompõe em três perguntas mutuamente exclusivas e coletivamente exaustivas {data-tracker="O PROBLEMA"}
+
+```{mermaid}
+%%| fig-width: 14
+%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#5B6B7A','primaryColor':'#F2F4F7','primaryTextColor':'#051C2C','primaryBorderColor':'#DCE6FF'}}}%%
+graph LR
+  R["<b>Manter as campanhas<br/>durante a crise?</b>"]:::raiz
+  R --> A["<b>A · Impacto</b><br/>o que a crise fez<br/>com o interesse?"]
+  R --> B["<b>B · Trajetória</b><br/>o interesse vai<br/>se recuperar?"]
+  R --> C["<b>C · Decisão</b><br/>qual ação compensa<br/>em cada cenário?"]
+  A --> A1(["nível, tendência<br/>e quebras de Yt"]):::med
+  B --> B1(["previsão SARIMA<br/>com IC"]):::med
+  C --> C1(["manter × ajustar<br/>× pausar"]):::med
+  classDef raiz fill:#051C2C,color:#fff,stroke:#051C2C
+  classDef med fill:#DCE6FF,color:#051C2C,stroke:#2251FF
+```
+
+::: notes
+Consultor A · 1:30. Árvore MECE. Validar exclusividade e exaustividade dos três ramos.
+:::
+
+## Três hipóteses orientam a análise e serão confirmadas ou refutadas pelos dados {data-tracker="O PROBLEMA"}
+
+:::: grid3
+::: {.hyp .fragment}
+<span class="h">H1</span>
+**A crise provocou uma quebra no nível de interesse por "Alaska Airlines"**
+<span class="teste">Teste: análise de intervenção e quebra estrutural na série Yt</span>
+<span class="pill">A testar</span>
+:::
+::: {.hyp .fragment}
+<span class="h">H2</span>
+**O interesse volta ao padrão histórico em até \[h\] períodos**
+<span class="teste">Teste: previsão SARIMA com IC de 80% e 95%</span>
+<span class="pill">A testar</span>
+:::
+::: {.hyp .fragment}
+<span class="h">H3</span>
+**Manter as campanhas compensa mais do que pausá-las**
+<span class="teste">Teste: comparação de cenários (manter × ajustar × pausar)</span>
+<span class="pill">A testar</span>
+:::
+::::
+
+::: notes
+Consultor A · 1:30. Abordagem hypothesis-driven. Definir o horizonte [h] da H2 e o critério da H3.
+:::
+
+# Dados e modelagem {data-num="02" background-image="img/capa.png" background-size="240%" background-position="85% 15%"}
+
+Do download em Python à previsão em R, tudo reproduzível.
+
+## Dados públicos e um pipeline reproduzível sustentam a série Yt {data-tracker="DADOS E MODELAGEM"}
+
+```{mermaid}
+%%| fig-width: 14
+%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#5B6B7A'}}}%%
+graph LR
+  P["<b>Python</b><br/>download dos dados"]:::t --> D["<b>CSV bruto</b><br/>01/01/2022–23/10/2026"]:::d --> R["<b>R</b><br/>ARIMA / SARIMA"]:::t --> Q["<b>Quarto</b><br/>slides + relatório"]:::t
+  classDef t fill:#051C2C,color:#fff,stroke:#051C2C
+  classDef d fill:#DCE6FF,color:#051C2C,stroke:#2251FF
+```
+
+| Item | Definição |
+|:--------|:-----------------------------------------------|
+| Variável Yt | Índice de interesse (0 a 100) do Google Trends para "Alaska Airlines" |
+| Alternativa | Quantidade de notícias associadas ao termo (a avaliar) |
+| Frequência · Região | \[semanal ou mensal\] · \[EUA ou mundial\] — definir |
+| Tratamento | \[faltantes, outliers e suavização\] — definir |
+
+::: notes
+Consultor B · 1:30. Definir frequência, região e tratamento; decidir sobre série de notícias complementar.
+:::
+
+## A série Yt exibe [tendência, sazonalidade e choques: a descrever] {data-tracker="DADOS E MODELAGEM"}
+
+:::: {.columns}
+::: {.column width="68%"}
+```{r}
+#| label: fig-serie
+#| output: asis
+#| fig-width: 12
+#| fig-height: 5.6
+if (!tem_dados) ph("Gráfico · Série Yt com eventos da crise") else print(
+  ggplot(yt, aes(data, interesse)) + geom_line(color = pal[["azul"]], linewidth = 1) +
+    geom_vline(xintercept = eventos, color = pal[["verm"]], linetype = "dashed") +
+    labs(x = NULL, y = "Interesse (0 a 100)") + tema)
+```
+:::
+::: {.column width="32%"}
+::: {.card .fragment}
+<h4><span class="num">1</span>Nível e tendência</h4>\[a descrever\]
+:::
+::: {.card .fragment}
+<h4><span class="num">2</span>Sazonalidade</h4>\[a descrever\]
+:::
+::: {.card .fragment}
+<h4><span class="num">3</span>Choques e eventos</h4>\[a descrever\]
+:::
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; elaboração própria
+:::
+
+::: notes
+Consultor B · 1:30. O gráfico se preenche sozinho quando dados/yt_alaska.csv existir.
+:::
+
+## Estacionariedade e ACF/PACF definem as ordens candidatas do modelo [a confirmar] {data-tracker="DADOS E MODELAGEM"}
+
+::: panel-tabset
+### ACF
+
+```{r}
+#| output: asis
+#| fig-width: 12
+#| fig-height: 4.6
+if (!tem_dados) ph("Gráfico · ACF da série diferenciada", "p-md") else print(ggAcf(diff(serie)) + labs(title = NULL) + tema)
+```
+
+### PACF
+
+```{r}
+#| output: asis
+#| fig-width: 12
+#| fig-height: 4.6
+if (!tem_dados) ph("Gráfico · PACF da série diferenciada", "p-md") else print(ggPacf(diff(serie)) + labs(title = NULL) + tema)
+```
+
+### ADF e KPSS
+
+```{r}
+#| output: asis
+if (!tem_dados) ph("Tabela · testes ADF e KPSS", "p-md") else print(knitr::kable(data.frame(
+  teste = c("ADF", "KPSS"), `p-valor` = c(adf.test(serie)$p.value, kpss.test(serie)$p.value),
+  check.names = FALSE), digits = 3))
+```
+
+### Decomposição
+
+```{r}
+#| output: asis
+#| fig-width: 12
+#| fig-height: 5
+if (!tem_dados) ph("Gráfico · decomposição (tendência, sazonalidade, resíduo)", "p-md") else print(autoplot(stl(serie, "periodic")) + tema)
+```
+:::
+
+::: notes
+Consultor B · 2:00. Clique nas abas: ACF, PACF, testes e decomposição.
+:::
+
+## O modelo ARIMA/SARIMA escolhido deve passar no diagnóstico de resíduos {data-tracker="DADOS E MODELAGEM"}
+
+:::: {.columns}
+::: {.column width="46%"}
+| Modelo | AIC | BIC | RMSE |
+|:----------------------|:--:|:--:|:--:|
+| Candidato 1 (p,d,q)(P,D,Q)s | — | — | — |
+| Candidato 2 (p,d,q)(P,D,Q)s | — | — | — |
+| Candidato 3 (p,d,q)(P,D,Q)s | — | — | — |
+| Referência: auto.arima | — | — | — |
+
+::: {.callout-note appearance="minimal"}
+**Critério de escolha.** \[definir: menor AIC/BIC, resíduos como ruído branco e boa validação fora da amostra\]
+:::
+:::
+::: {.column width="54%"}
+```{r}
+#| output: asis
+#| fig-width: 10
+#| fig-height: 6
+if (!tem_dados || is.null(ajuste)) ph("Gráfico · resíduos, ACF dos resíduos e Ljung-Box", "p-md") else checkresiduals(ajuste)
+```
+:::
+::::
+
+::: notes
+Consultor B · 2:00. Defina `ajuste` no chunk de configuração para o diagnóstico aparecer aqui.
+:::
+
+## A previsão projeta [recuperação \| estagnação] do interesse nos próximos [h] períodos {data-tracker="DADOS E MODELAGEM"}
+
+```{r}
+#| output: asis
+#| fig-width: 14
+#| fig-height: 4.3
+if (!tem_dados || is.null(ajuste)) ph("Gráfico · série observada + previsão com IC de 80% e 95%", "p-sm") else
+  print(autoplot(forecast(ajuste, h = H, level = c(80, 95))) + labs(title = NULL, x = NULL, y = NULL) + tema)
+```
+
+:::: grid3
+::: card
+<span class="kpi-rot">Cenário otimista</span>
+<p class="kpi">\[valor\]</p>
+:::
+::: card
+<span class="kpi-rot">Cenário base</span>
+<p class="kpi base">\[valor\]</p>
+:::
+::: card
+<span class="kpi-rot">Cenário pessimista</span>
+<p class="kpi neg">\[valor\]</p>
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; modelagem do grupo (R)
+:::
+
+::: notes
+Consultor B · 1:30. Três trajetórias a partir dos intervalos de confiança.
+:::
+
+# A decisão {data-num="03" background-image="img/capa.png" background-size="230%" background-position="50% 100%"}
+
+Cenários, recomendação e condições para revisá-la.
+
+## Três cenários permitem comparar manter, ajustar e pausar as campanhas {data-tracker="A DECISÃO"}
+
+::: panel-tabset
+### Manter
+
+:::: grid3
+::: card
+<h4>Ação</h4>Campanhas no ritmo atual
+:::
+::: card
+<h4>Efeito esperado</h4>\[a preencher\]
+:::
+::: card
+<h4>Risco · gatilho de revisão</h4>\[a preencher\]
+:::
+::::
+
+### Ajustar
+
+:::: grid3
+::: card
+<h4>Ação</h4>Ajustar mensagem e intensidade
+:::
+::: card
+<h4>Efeito esperado</h4>\[a preencher\]
+:::
+::: card
+<h4>Risco · gatilho de revisão</h4>\[a preencher\]
+:::
+::::
+
+### Pausar
+
+:::: grid3
+::: card
+<h4>Ação</h4>Suspender até a normalização
+:::
+::: card
+<h4>Efeito esperado</h4>\[a preencher\]
+:::
+::: card
+<h4>Risco · gatilho de revisão</h4>\[a preencher\]
+:::
+::::
+:::
+
+::: notes
+Consultor C · 2:30. Percorra as três abas e compare efeito, risco e gatilho sob os cenários projetados.
+:::
+
+## Recomendamos [manter \| ajustar \| pausar] as campanhas porque [razão principal] {.dark data-tracker="A DECISÃO" background-gradient="linear-gradient(135deg,#051C2C 0%,#0A2E73 60%,#1A47C4 100%)"}
+
+::: {.r-fit-text .fragment}
+\[MANTER \| AJUSTAR \| PAUSAR\]
+:::
+
+:::: grid3
+::: card
+<h4><span class="num">1</span>Demanda</h4>\[a preencher\]
+:::
+::: card
+<h4><span class="num">2</span>Previsão</h4>\[a preencher\]
+:::
+::: card
+<h4><span class="num">3</span>Risco e custo</h4>\[a preencher\]
+:::
+::::
+
+::: {.card style="margin-top:26px"}
+<b style="color:#00A9F4;letter-spacing:.1em">CONDIÇÕES PARA REVISAR A DECISÃO</b> \[gatilhos e prazo de revisão\]
+:::
+
+::: notes
+Consultor C · 2:30. Slide central da decisão.
+:::
+
+## A recomendação depende de premissas e limitações que precisam ser monitoradas {data-tracker="A DECISÃO"}
+
+:::: {.columns}
+::: {.column width="58%"}
+::: {.callout-warning appearance="minimal"}
+**Google Trends é um índice relativo** de interesse, não de vendas.
+:::
+::: {.callout-warning appearance="minimal"}
+**Possível quebra estrutural** após a crise.
+:::
+::: {.callout-warning appearance="minimal"}
+**A incerteza da previsão cresce** com o horizonte.
+:::
+::: {.callout-warning appearance="minimal"}
+**O termo pode refletir buscas** que não indicam intenção de compra.
+:::
+:::
+::: {.column width="42%"}
+::: card
+<h4>Gatilhos de monitoramento</h4>
+
+- \[Indicador 1 e limite de alerta\]
+- \[Indicador 2 e limite de alerta\]
+- \[Frequência de revisão da decisão\]
+:::
+:::
+::::
+
+::: notes
+Consultor C · 2:00. Definir indicadores e limites de alerta.
+:::
+
+## Próximos passos: do esboço ao relatório e aos slides finais {.dark data-tracker="A DECISÃO" background-gradient="linear-gradient(180deg,#051C2C 0%,#0A2E73 100%)" background-image="img/faixa.png" background-size="100% auto" background-position="bottom"}
+
+::: timeline
+::: {.tl .fragment}
+**até 06/11/2026**
+Submeter o tema ao professor
+:::
+::: {.tl .fragment}
+**\[prazo\]**
+Baixar os dados (Python)
+:::
+::: {.tl .fragment}
+**\[prazo\]**
+Modelar ARIMA/SARIMA (R)
+:::
+::: {.tl .fragment}
+**\[prazo\]**
+Escrever o relatório (LaTeX)
+:::
+::: {.tl .fragment}
+**\[prazo\]**
+Finalizar os slides (25 min)
+:::
+:::
+
+::: {.hero style="font-size:2.2em;margin-top:60px"}
+Perguntas e <em>discussão</em>
+:::
+
+::: notes
+Consultor C · 1:00. Fechar com o cronograma e abrir para perguntas.
+:::
+
+## Apêndice: esqueleto do modelo em R (oculto na apresentação) {visibility="hidden" data-tracker="APÊNDICE"}
+
+```{.r code-line-numbers="2-5"}
+serie  <- ts(yt$interesse, frequency = 52)
+adf.test(serie); kpss.test(serie)                       # estacionariedade
+ajuste <- Arima(serie, order = c(p, d, q), seasonal = c(P, D, Q))
+checkresiduals(ajuste)                                  # diagnóstico (Ljung-Box)
+prev   <- forecast(ajuste, h = 26, level = c(80, 95))   # previsão com IC
+```
