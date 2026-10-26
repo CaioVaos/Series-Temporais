@@ -1,99 +1,565 @@
-:root{--navy:#051C2C;--azul:#2251FF;--ciano:#00A9F4;--verm:#C8102E;--cinza:#5B6B7A;--tint:#F2F4F7;--azul-claro:#DCE6FF;
---serif:Georgia,"Times New Roman",serif;--sans:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif}
-.reveal{font-family:var(--sans);font-size:30px;color:#1B2733}
-.reveal h1,.reveal h2,.reveal h3{font-family:var(--serif);color:var(--navy);text-transform:none;letter-spacing:-.01em}
+/* =====================================================================
+   ESTILO · Alaska Airlines: campanhas publicitárias na crise
+   ---------------------------------------------------------------------
+   Índice
+   1. Variáveis (paleta, fontes, ajustes rápidos)
+   2. Base (tipografia, títulos, subtítulo)
+   3. Tracker e slides escuros
+   4. Capa
+   5. Divisores de seção
+   6. Hero
+   7. Componentes comuns (grids, cards, números)
+   8. Slide: resposta primeiro (resumo executivo)
+   9. Slide: S-C-Q (situação, complicação, questão)
+  10. Slide: mapa dos três pilares
+  11. Slide: pilar (painel lateral + três blocos)
+  12. Slide: próximos passos (tabela de governança)
+  13. Rodapé e número do slide
+  14. Slide final
+  15. Esconder rodapé na capa e no slide final
+  16. Componentes reserva (não usados hoje; apague se não precisar)
+   ===================================================================== */
+
+
+/* ========== 1. VARIÁVEIS ========== */
+:root{
+  /* Alaska Airlines */
+  --navy:#0C446B;          /* MidnightBlue */
+  --navy-deep:#082F4A;     /* versão mais escura (sombras, gradientes) */
+  --azul:#44ABC3;          /* MediumTurquoise */
+  --ciano:#44ABC3;         /* acento em fundo escuro */
+  --petroleo:#1F7C9C;      /* tom intermediário (gradientes, pilar 2) */
+  --tan:#B7D48A;           /* Tan */
+  --aco:#8CA4C3;           /* LightsteelBlue */
+
+  /* apoio */
+  --verm:#C8102E;          /* crise / alerta (mantido por significado) */
+  --cinza:#4F6882;         /* texto secundário */
+  --tint:#F1F5F9;          /* fundo de cards */
+  --azul-claro:#DCE7F1;    /* bordas e textos claros */
+
+  /* fontes */
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+
+  /* gradiente e sombras reutilizados */
+  --grad-navy:linear-gradient(135deg,var(--navy-deep),var(--navy) 70%,var(--petroleo));
+  --sombra-card:0 10px 30px rgba(12,68,107,.08);
+  --sombra-destaque:0 14px 40px rgba(12,68,107,.22);
+
+  /* AJUSTES RÁPIDOS */
+  --rodape-y:22px;         /* altura do texto do rodapé e do número do slide (menor = mais baixo) */
+  --rodape-x:56px;         /* distância do texto do rodapé até a borda esquerda */
+  --logo-canto:110px;      /* tamanho da logo do canto */
+}
+
+
+/* ========== 2. BASE ========== */
+.reveal{font-family:var(--sans);font-size:30px;color:#12283A}
+.reveal h1,.reveal h2,.reveal h3{
+  font-family:var(--serif);color:var(--navy);
+  text-transform:none;letter-spacing:-.01em;
+}
 .reveal .slides section{text-align:left}
 .reveal .slides section h2{font-size:1.45em;line-height:1.18;margin:.75em 0 .55em;width:90%}
-.reveal .footer{font-size:.4em;color:var(--cinza)}
-
-/* tracker + selo preliminar */
-.reveal .slides section[data-tracker]::before{content:attr(data-tracker);position:absolute;top:-6px;left:0;font:700 .38em var(--sans);letter-spacing:.14em;color:var(--azul)}
-.reveal .slides section.dark{color:#fff}.reveal .slides section.dark h2,.reveal .slides section.dark h3{color:#fff}
-.reveal .slides section.dark[data-tracker]::before{color:var(--ciano)}
-.reveal .slides section.dark::after{color:#8FB0D8!important;border-color:#8FB0D8!important}
 .sem-titulo h2{display:none}
 
-/* capa */
-#title-slide h1.title{color:#fff;font-size:2.15em;line-height:1.1;width:58%;text-shadow:0 2px 24px rgba(5,28,44,.7)}
-#title-slide .subtitle{color:var(--ciano);font:700 .7em var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-top:1em}
-#title-slide .quarto-title-authors,#title-slide .date{color:#DCE6FF;font-size:.6em}
+/* subtítulo logo abaixo do ## */
+.reveal .subtitulo{
+  margin:-.35em 0 .9em;    /* margem negativa cola o subtítulo no título */
+  width:90%;
+  font:400 .62em var(--sans);
+  color:var(--cinza);
+  line-height:1.35;
+}
+.reveal .slides section.dark .subtitulo{color:var(--azul-claro)}
+
+
+/* ========== 3. TRACKER E SLIDES ESCUROS ========== */
+.reveal .slides section[data-tracker]::before{
+  content:attr(data-tracker);position:absolute;top:-6px;left:0;
+  font:700 .38em var(--sans);letter-spacing:.14em;color:var(--navy);
+}
+.reveal .slides section.dark{color:#fff}
+.reveal .slides section.dark h2,
+.reveal .slides section.dark h3{color:#fff}
+.reveal .slides section.dark[data-tracker]::before{color:var(--ciano)}
+
+
+/* ========== 4. CAPA ========== */
+#title-slide h1.title{
+  color:#fff;font-size:2.15em;line-height:1.1;width:58%;
+  text-shadow:0 2px 24px rgba(8,47,74,.7);
+}
+#title-slide .subtitle{
+  color:var(--ciano);font:700 .7em var(--sans);
+  letter-spacing:.08em;text-transform:uppercase;margin-top:1em;
+}
+#title-slide .quarto-title-authors,
+#title-slide .date{color:var(--azul-claro);font-size:.6em}
 #title-slide .quarto-title-author-name{color:#fff}
 
-/* divisores de seção */
-.divider{color:#fff}.divider h1{color:#fff;font-size:2.7em;width:60%;margin-top:1.4em;line-height:1.05;text-shadow:0 2px 30px rgba(5,28,44,.8)}
-.divider::before{content:attr(data-num);display:block;font:700 7em var(--serif);color:transparent;-webkit-text-stroke:2px var(--ciano);line-height:1;margin-top:.5em}
-.divider p{color:#DCE6FF;font-size:.8em;width:55%}
 
-/* hero e chips */
-.hero{font:700 3.4em var(--serif);color:#fff;line-height:1.05}.hero em{font-style:normal;color:var(--ciano)}
-.chips{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
-.chips span{border:1px solid rgba(255,255,255,.45);border-radius:40px;padding:6px 22px;font-size:.62em;color:#DCE6FF;backdrop-filter:blur(4px);background:rgba(255,255,255,.08)}
+/* ========== 5. DIVISORES DE SEÇÃO ==========
+   Vale para .divider ou para qualquer slide com data-num
+   (os "# Título {data-num=..}") */
+.divider,
+.reveal section[data-num]{color:#fff}
+.divider h1,
+.reveal section[data-num] h1{
+  color:#fff;font-size:2.7em;width:60%;margin-top:1.4em;line-height:1.05;
+  text-shadow:0 2px 30px rgba(8,47,74,.8);
+}
+.divider::before,
+.reveal section[data-num]::before{
+  content:attr(data-num);display:block;
+  font:700 7em var(--serif);color:transparent;
+  -webkit-text-stroke:2px var(--ciano);line-height:1;margin-top:.5em;
+}
+.divider p,
+.reveal section[data-num] p{color:var(--azul-claro);font-size:.8em;width:55%}
 
-/* blocos */
+
+/* ========== 6. HERO ========== */
+.hero{font:700 3.4em var(--serif);color:#fff;line-height:1.05}
+.hero em{font-style:normal;color:var(--ciano)}
+
+/* pergunta que encolhe para o canto (auto-animate) */
+.reveal .hero.kicker{
+  position:absolute;top:-6px;left:0;margin:0;
+  font-size:.75em;color:var(--ciano);letter-spacing:.04em;
+}
+
+
+/* ========== 7. COMPONENTES COMUNS ========== */
 .grid2,.grid3,.grid4{display:grid;gap:26px;margin-top:20px}
-.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--tint);border-radius:10px;padding:22px 26px;font-size:.68em;line-height:1.4;box-shadow:0 2px 0 rgba(5,28,44,.04)}
+.grid2{grid-template-columns:1fr 1fr}
+.grid3{grid-template-columns:repeat(3,1fr)}
+.grid4{grid-template-columns:repeat(4,1fr)}
+
+.card{
+  background:var(--tint);border-radius:10px;padding:22px 26px;
+  font-size:.68em;line-height:1.4;box-shadow:0 2px 0 rgba(8,47,74,.04);
+}
 .card h4{margin:0 0 .45em;font:700 1.15em var(--serif);color:var(--navy)}
 .card p{margin:0}
-.dark .card{background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff}.dark .card h4{color:#fff}
-.num{display:inline-flex;width:1.9em;height:1.9em;align-items:center;justify-content:center;border-radius:50%;background:var(--azul);color:#fff;font:700 .85em var(--sans);margin-right:.55em}
-.resposta{background:linear-gradient(135deg,var(--navy),#0A2E73 70%,var(--azul));color:#fff;border-radius:14px;padding:44px 44px;box-shadow:0 18px 50px rgba(34,81,255,.25)}
-.resposta small{display:block;color:var(--ciano);font:700 .4em var(--sans);letter-spacing:.14em;margin-bottom:1.1em}
+.dark .card{
+  background:rgba(255,255,255,.1);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.18);color:#fff;
+}
+.dark .card h4{color:#fff}
+
+.num{
+  display:inline-flex;width:1.9em;height:1.9em;align-items:center;justify-content:center;
+  border-radius:50%;background:var(--navy);color:#fff;
+  font:700 .85em var(--sans);margin-right:.55em;
+}
+
+/* caixa de resposta (gradiente azul) */
+.resposta{
+  background:var(--grad-navy);color:#fff;border-radius:14px;padding:44px;
+  box-shadow:0 18px 50px rgba(12,68,107,.25);
+}
+.resposta small{
+  display:block;color:var(--tan);font:700 .4em var(--sans);
+  letter-spacing:.14em;margin-bottom:1.1em;
+}
 .resposta strong{font:700 1.25em var(--serif);line-height:1.15;display:block}
-.kpi{font:700 1.9em var(--serif);color:var(--azul);margin:.1em 0 0;line-height:1}.kpi.base{color:var(--navy)}.kpi.neg{color:var(--verm)}
+
+.fonte{position:absolute;bottom:-34px;left:0;font-size:.34em;color:var(--cinza)}
+
+
+/* ========== 8. SLIDE: RESPOSTA PRIMEIRO ========== */
+.reveal .resumo{
+  display:grid; grid-template-columns:5fr 6fr; gap:36px;
+  height:560px; margin-top:24px; align-items:stretch;
+}
+.reveal .resumo .resposta{
+  display:flex; flex-direction:column; justify-content:center;
+  margin:0; padding:50px 54px;
+}
+.reveal .resumo .resposta p{margin:0}
+.reveal .resumo .resposta small{font-size:.5em; margin-bottom:1.4em}
+.reveal .resumo .resposta strong{font-size:1.7em; line-height:1.12}
+.reveal .resposta-sub{display:block; margin-top:.9em; font-size:.85em; opacity:.92}
+
+.reveal .resumo-args{display:flex; flex-direction:column; gap:22px}
+.reveal .resumo-args .card{
+  flex:1; margin:0;
+  display:flex; flex-direction:column; justify-content:center;
+  font-size:.8em; line-height:1.45;
+}
+.reveal .resumo-args .card h4{margin-bottom:.5em}
+
+/* variante em slide escuro */
+.reveal .slides section.dark .resposta{
+  background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.25); box-shadow:none;
+}
+.reveal .slides section.dark .resposta strong{color:var(--ciano)}
+
+
+/* ========== 9. SLIDE: S-C-Q ========== */
+.reveal .scq{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:44px;
+  margin-top:26px;
+}
+.reveal .scq-col{
+  --c:var(--aco);
+  position:relative; display:flex; flex-direction:column;
+  min-height:340px; padding:36px 38px 30px;
+  background:var(--tint); border-radius:14px; border-top:7px solid var(--c);
+  font-size:.7em; line-height:1.5; box-shadow:var(--sombra-card);
+}
+.reveal .scq-col.c{--c:var(--verm)}
+.reveal .scq-col.q{--c:var(--azul)}
+
+/* letra grande vazada no canto */
+.reveal .scq-letra{
+  position:absolute; top:10px; right:26px;
+  font:700 5.6em var(--serif); line-height:1;
+  color:transparent; -webkit-text-stroke:2px var(--c); opacity:.45;
+}
+.reveal .scq-col h4{margin:0; font:700 1.6em var(--serif); color:var(--navy)}
+.reveal .scq-rot{
+  display:block; margin:.35em 0 1.1em;
+  font:700 .62em var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--cinza);
+}
+.reveal .scq-col p{margin:0}
+
+/* seta entre as colunas */
+.reveal .scq-col.s::after,
+.reveal .scq-col.c::after{
+  content:"›"; position:absolute; top:50%; right:-41px; transform:translateY(-50%);
+  width:38px; height:38px; z-index:2;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--navy); color:#fff; border-radius:50%;
+  font:700 1.5em/1 var(--sans); padding-bottom:4px; box-sizing:border-box;
+}
+
+/* faixa de resposta */
+.reveal .scq-resposta{
+  margin-top:30px; padding:24px 40px; border-radius:14px; color:#fff;
+  background:var(--grad-navy); box-shadow:var(--sombra-destaque);
+}
+.reveal .scq-resposta p{display:flex; align-items:center; gap:34px; margin:0}
+.reveal .scq-resposta .rot{
+  font:700 .5em var(--sans); letter-spacing:.16em; color:var(--tan); white-space:nowrap;
+}
+.reveal .scq-resposta .txt{font-size:.82em; line-height:1.35}
+.reveal .scq-resposta .txt b{font:700 1.2em var(--serif); color:#fff}
+
+
+/* ========== 10. SLIDE: MAPA DOS TRÊS PILARES ========== */
+.reveal .pir-topo{
+  position:relative; margin-top:26px; padding:26px 40px; border-radius:14px; color:#fff;
+  display:flex; align-items:center; gap:34px; font-size:.82em;
+  background:var(--grad-navy); box-shadow:var(--sombra-destaque);
+}
+.reveal .pir-topo .rot{font:700 .55em var(--sans); letter-spacing:.16em; color:var(--tan); white-space:nowrap}
+.reveal .pir-topo b{font:700 1.35em var(--serif)}
+.reveal .pir-topo::after{
+  content:""; position:absolute; left:50%; bottom:-26px; width:3px; height:26px;
+  background:var(--aco); transform:translateX(-50%);
+}
+
+.reveal .pir{
+  --pc:var(--navy);
+  position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:54px;
+}
+.reveal .pir::before{      /* barra horizontal que liga os três pilares */
+  content:""; position:absolute; top:-28px; height:3px; background:var(--aco);
+  left:calc((100% - 64px)/6); right:calc((100% - 64px)/6);
+}
+.reveal .pir-col{
+  position:relative; padding:34px 34px 30px; border-radius:14px; background:var(--tint);
+  border-top:7px solid var(--pc); font-size:.7em; line-height:1.4;
+  box-shadow:var(--sombra-card);
+}
+.reveal .pir-col::before{  /* ligação vertical até a barra */
+  content:""; position:absolute; top:-35px; left:50%; width:3px; height:28px;
+  background:var(--aco); transform:translateX(-50%);
+}
+.reveal .pir-col.p1{--pc:var(--navy)}
+.reveal .pir-col.p2{--pc:var(--petroleo)}
+.reveal .pir-col.p3{--pc:var(--azul)}
+.reveal .pir-col p{margin:0}
+.reveal .pir-n{
+  display:flex; width:2.1em; height:2.1em; align-items:center; justify-content:center;
+  border-radius:50%; background:var(--pc); color:#fff; font:700 1.5em var(--serif); margin-bottom:.6em;
+}
+.reveal .pir-col h4{margin:0 0 .45em; font:700 1.4em var(--serif); color:var(--navy); line-height:1.15}
+.reveal .pir-q{display:block; margin-bottom:1.1em; font-style:italic; color:var(--cinza)}
+.reveal .pir-col ul{margin:0; padding-left:1.1em}
+.reveal .pir-col li{margin:.35em 0}
+.reveal .pir-col li::marker{color:var(--pc)}
+
+
+/* ========== 11. SLIDE: PILAR (painel lateral + três blocos) ========== */
+.reveal .pilar{
+  --pc1:var(--navy-deep); --pc2:var(--navy); --pa:var(--navy);
+  display:grid; grid-template-columns:330px 1fr; gap:30px; height:560px; margin-top:20px;
+}
+.reveal .pilar.p1{--pc1:var(--navy-deep); --pc2:var(--navy);    --pa:var(--navy)}
+.reveal .pilar.p2{--pc1:var(--navy);      --pc2:var(--petroleo); --pa:var(--petroleo)}
+.reveal .pilar.p3{--pc1:#17708E;          --pc2:#2F95B0;         --pa:var(--azul)}
+
+.reveal .pilar-lado{
+  display:flex; flex-direction:column; padding:34px 32px; border-radius:14px; color:#fff;
+  background:linear-gradient(160deg,var(--pc1),var(--pc2));
+  box-shadow:var(--sombra-destaque);
+}
+.reveal .pilar-lado p{margin:0}
+.reveal .pilar-tag{display:block; font:700 .5em var(--sans); letter-spacing:.18em; color:var(--tan)}
+.reveal .pilar-n{
+  display:block; margin:.1em 0 .1em; line-height:1;
+  font:700 6.5em var(--serif); color:transparent; -webkit-text-stroke:2px rgba(255,255,255,.75);
+}
+.reveal .pilar-lado h4{margin:0; font:700 1.5em var(--serif); color:#fff; line-height:1.15}
+.reveal .pilar-sub{display:block; margin-top:.4em; font:700 .6em var(--sans); letter-spacing:.12em; text-transform:uppercase; opacity:.85}
+.reveal .pilar-q{
+  display:block; margin-top:auto; padding-top:18px; border-top:1px solid rgba(255,255,255,.35);
+  font-size:.66em; line-height:1.4; font-style:italic; opacity:.95;
+}
+
+.reveal .pilar-corpo{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+.reveal .bloco{
+  display:flex; flex-direction:column; padding:24px 26px 22px; border-radius:14px;
+  background:var(--tint); border-top:6px solid var(--pa); font-size:.68em; line-height:1.4;
+}
+.reveal .bloco h4{margin:0 0 .8em; font:700 1.15em var(--serif); color:var(--navy)}
+.reveal .bloco .num{background:var(--pa)}
+.reveal .bloco-visual{
+  flex:1; display:flex; align-items:center; justify-content:center; text-align:center;
+  margin-bottom:16px; padding:16px; border-radius:10px;
+  border:2px dashed var(--aco); color:var(--cinza); font-size:.85em;
+  background:repeating-linear-gradient(135deg,#fff,#fff 14px,#EEF3F8 14px,#EEF3F8 28px);
+}
+.reveal .bloco-msg{
+  padding-left:12px; border-left:4px solid var(--pa); color:var(--cinza); line-height:1.4;
+}
+
+
+/* ========== 12. SLIDE: PRÓXIMOS PASSOS (tabela de governança) ========== */
+.reveal .np{margin-top:18px; font-size:.66em; counter-reset:np}
+.reveal .np p{display:contents; margin:0}   /* os spans viram células da grade */
+
+.reveal .np-head,
+.reveal .np-row{
+  display:grid; grid-template-columns:2fr 3.4fr 1.5fr 1.9fr 1.6fr;
+  column-gap:20px; align-items:center; padding:0 26px;
+}
+.reveal .np-head{
+  padding-top:13px; padding-bottom:13px; border-radius:10px 10px 0 0;
+  background:var(--navy); color:#fff;
+  font:700 .74em var(--sans); letter-spacing:.12em; text-transform:uppercase;
+}
+.reveal .np-row{
+  counter-increment:np; padding-top:17px; padding-bottom:17px;
+  background:var(--tint); border-bottom:4px solid #fff;
+}
+
+/* frente de trabalho, com número automático */
+.reveal .np .frente{
+  display:flex; align-items:center; gap:14px;
+  font:700 1.18em var(--serif); color:var(--navy); line-height:1.15;
+}
+.reveal .np .frente::before{
+  content:counter(np); flex:0 0 auto;
+  display:inline-flex; width:1.9em; height:1.9em; align-items:center; justify-content:center;
+  border-radius:50%; background:var(--navy); color:#fff; font:700 .8em var(--sans);
+}
+.reveal .np .acao{line-height:1.35}
+.reveal .np .resp{
+  justify-self:start; padding:5px 16px; border-radius:30px;
+  background:#fff; border:1.5px solid var(--azul-claro); color:var(--navy); font-weight:700; font-size:.92em;
+}
+.reveal .np .rec{color:var(--cinza); line-height:1.3}
+
+/* prazo: fase + marco */
+.reveal .np .prazo{display:flex; flex-direction:column; align-items:flex-start; gap:7px}
+.reveal .np .gate{font:700 .78em var(--sans); letter-spacing:.06em; color:var(--cinza)}
+
+/* fases (tabela e legenda) */
+.reveal .fase{
+  display:inline-block; padding:3px 16px; border-radius:30px;
+  font:700 .88em var(--sans); white-space:nowrap;
+}
+.reveal .fase.f1{background:var(--navy); color:#fff}
+.reveal .fase.f2{background:var(--petroleo); color:#fff}
+.reveal .fase.f3{background:var(--tan); color:var(--navy)}
+
+/* faixa inferior: legenda das fases + KPIs */
+.reveal .np-rodape{
+  display:flex; align-items:center; gap:16px; margin-top:20px; padding:14px 26px;
+  border:2px solid var(--azul-claro); border-radius:10px; font-size:.92em;
+}
+.reveal .np-rodape p{display:flex; align-items:center; gap:16px; width:100%; margin:0}
+.reveal .np-rodape .rot{font:700 .72em var(--sans); letter-spacing:.16em; color:var(--cinza)}
+.reveal .np-rodape .kpis{margin-left:auto; color:var(--cinza); font-weight:700}
+
+
+/* ========== 13. RODAPÉ E NÚMERO DO SLIDE ========== */
+.reveal .footer{
+  position:absolute !important;
+  left:0 !important; right:0 !important; bottom:0 !important;
+  width:100% !important; height:var(--logo-canto);
+  margin:0 !important; padding:0 !important;
+  display:block !important; box-sizing:border-box;
+  font-size:.4em; color:var(--cinza);
+  text-align:left !important;
+}
+/* o texto fica dentro de um <p>: é ele que posicionamos */
+.reveal .footer p{
+  position:absolute;
+  left:var(--rodape-x); bottom:var(--rodape-y);
+  margin:0 !important; padding:0; line-height:1.2;
+}
+/* logo colada no canto inferior direito */
+.reveal .footer::after{
+  content:""; position:absolute; right:0; bottom:0;
+  width:var(--logo-canto); height:var(--logo-canto);
+  background:url("img/logo_canto.png") no-repeat right bottom / contain;
+}
+/* número do slide à esquerda da logo, na mesma altura do texto */
+.reveal .slide-number{
+  right:calc(var(--logo-canto) + 20px) !important;
+  bottom:var(--rodape-y) !important;
+  background:transparent; color:var(--cinza);
+}
+/* slides escuros: rodapé claro (o rodapé não é irmão do <section>, por isso :has) */
+.reveal:has(section.dark.present) .footer,
+.reveal:has(section.dark.present) .slide-number{color:var(--aco)}
+
+
+/* ========== 14. SLIDE FINAL: autores à esquerda, logo à direita ========== */
+.reveal .final-slide{color:var(--navy)}
+.reveal .final-wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:700px; margin-top:20px; gap:90px;
+}
+
+/* autores */
+.reveal .final-autores{
+  flex:0 0 auto; align-self:center;
+  display:flex; flex-direction:column; gap:40px;
+  padding-right:70px; border-right:4px solid var(--azul);
+}
+.reveal .autor p{margin:0}
+.reveal .autor .nome{
+  display:block;
+  font:700 1.3em var(--serif); color:var(--navy); line-height:1.1;
+}
+.reveal .autor .email{
+  display:block; margin-top:.35em;
+  font:400 .72em var(--sans); letter-spacing:.02em; color:var(--cinza);
+}
+
+/* logo */
+.reveal .final-right{flex:1 1 auto; display:flex; align-items:center; justify-content:center}
+.reveal .final-right p{margin:0; width:100%}
+.reveal .final-right img.final-logo{
+  width:100%; max-width:640px; height:auto; display:block; margin:0 auto;
+  border:none; box-shadow:none; background:none;
+}
+
+
+/* ========== 15. ESCONDER RODAPÉ NA CAPA E NO SLIDE FINAL ==========
+   Dois mecanismos que se complementam (basta um funcionar):
+   - classe .hide-footer, criada pelo data-state do reveal.js
+   - :has(... .present), que não depende do data-state
+   A logo do canto some junto, porque é o ::after do rodapé. */
+.hide-footer .footer,
+.hide-footer .slide-number,
+.reveal:has(section#title-slide.present) .footer,
+.reveal:has(section#title-slide.present) .slide-number,
+.reveal:has(section.final-slide.present) .footer,
+.reveal:has(section.final-slide.present) .slide-number{
+  display:none !important;
+}
+
+
+/* =====================================================================
+   16. COMPONENTES RESERVA
+   Não aparecem na apresentação atual. Ficam disponíveis para novos slides
+   (linha do tempo, hipóteses, KPIs, abas, tabelas, callouts etc.).
+   ===================================================================== */
+
+/* chips */
+.chips{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
+.chips span{
+  border:1px solid rgba(255,255,255,.45);border-radius:40px;padding:6px 22px;
+  font-size:.62em;color:var(--azul-claro);
+  backdrop-filter:blur(4px);background:rgba(255,255,255,.08);
+}
+
+/* KPIs */
+.kpi{font:700 1.9em var(--serif);color:var(--azul);margin:.1em 0 0;line-height:1}
+.kpi.base{color:var(--navy)}
+.kpi.neg{color:var(--verm)}
 .kpi-rot{font-weight:700;font-size:.62em;color:var(--cinza)}
 
-/* placeholder (vira gráfico R quando houver dados) */
-.ph{border:2px dashed #9AA8B8;background:repeating-linear-gradient(135deg,var(--tint),var(--tint) 14px,#EAEEF3 14px,#EAEEF3 28px);border-radius:10px;
- min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--cinza);font-size:.7em;padding:24px}
-.ph b{font-size:1.1em;color:var(--navy)}.ph small{font-size:.65em;margin-top:.6em;max-width:80%}.ph.p-sm{min-height:300px}.ph.p-md{min-height:360px}
-.reveal img.r-stretch,.reveal .cell-output-display img{border-radius:10px}
+/* placeholder de gráfico */
+.ph{
+  border:2px dashed var(--aco);
+  background:repeating-linear-gradient(135deg,var(--tint),var(--tint) 14px,#E6ECF3 14px,#E6ECF3 28px);
+  border-radius:10px;min-height:430px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;color:var(--cinza);font-size:.7em;padding:24px;
+}
+.ph b{font-size:1.1em;color:var(--navy)}
+.ph small{font-size:.65em;margin-top:.6em;max-width:80%}
+.ph.p-sm{min-height:300px}
+.ph.p-md{min-height:360px}
+.reveal img.r-stretch,
+.reveal .cell-output-display img{border-radius:10px}
 
 /* linha do tempo */
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:80px 0 30px}
-.timeline::before{content:"";position:absolute;top:14px;left:0;right:0;height:3px;background:var(--cinza)}
+.timeline::before{content:"";position:absolute;top:14px;left:0;right:0;height:3px;background:var(--aco)}
 .tl{position:relative;padding-top:48px;font-size:.62em;line-height:1.35;padding-right:14px}
-.tl::before{content:"";position:absolute;top:2px;left:0;width:26px;height:26px;border-radius:50%;background:var(--azul);border:4px solid #fff;box-shadow:0 0 0 2px var(--azul)}
+.tl::before{
+  content:"";position:absolute;top:2px;left:0;width:26px;height:26px;border-radius:50%;
+  background:var(--azul);border:4px solid #fff;box-shadow:0 0 0 2px var(--azul);
+}
 .tl.crise::before{background:var(--verm);box-shadow:0 0 0 2px var(--verm)}
 .tl b{display:block;font:700 1.35em var(--serif);color:var(--navy);margin-bottom:.15em}
-.dark .timeline::before{background:#8FB0D8}.dark .tl b{color:var(--ciano)}.dark .tl::before{border-color:var(--navy)}
+.dark .timeline::before{background:var(--aco)}
+.dark .tl b{color:var(--ciano)}
+.dark .tl::before{border-color:var(--navy)}
 
 /* hipóteses */
-.hyp{background:var(--tint);border-radius:12px;padding:30px 30px 26px;font-size:.66em;line-height:1.35;display:flex;flex-direction:column;gap:12px}
+.hyp{
+  background:var(--tint);border-radius:12px;padding:30px 30px 26px;
+  font-size:.66em;line-height:1.35;display:flex;flex-direction:column;gap:12px;
+}
 .hyp .h{font:700 3em var(--serif);color:var(--azul);line-height:1}
-.hyp b{font-size:1.2em;color:var(--navy)}.hyp .teste{color:var(--cinza)}
-.pill{align-self:flex-start;background:var(--azul-claro);color:var(--navy);font-weight:700;border-radius:30px;padding:2px 18px;font-size:.8em;margin-top:auto}
+.hyp b{font-size:1.2em;color:var(--navy)}
+.hyp .teste{color:var(--cinza)}
+.pill{
+  align-self:flex-start;background:var(--tan);color:var(--navy);font-weight:700;
+  border-radius:30px;padding:2px 18px;font-size:.8em;margin-top:auto;
+}
 
-/* abas (panel-tabset) */
+/* abas */
 .panel-tabset .nav-tabs{border-bottom:2px solid var(--azul-claro);margin-bottom:18px}
-.panel-tabset .nav-tabs .nav-link{font:700 .62em var(--sans);color:var(--cinza);border:none;padding:8px 24px;text-transform:uppercase;letter-spacing:.06em}
-.panel-tabset .nav-tabs .nav-link.active{color:#fff;background:var(--azul);border-radius:8px 8px 0 0}
+.panel-tabset .nav-tabs .nav-link{
+  font:700 .62em var(--sans);color:var(--cinza);border:none;
+  padding:8px 24px;text-transform:uppercase;letter-spacing:.06em;
+}
+.panel-tabset .nav-tabs .nav-link.active{color:#fff;background:var(--navy);border-radius:8px 8px 0 0}
 .panel-tabset .tab-content{font-size:.74em}
 
-/* tabelas, callouts, mermaid */
+/* tabelas */
 .reveal table{font-size:.6em;width:100%;border-collapse:separate;border-spacing:0}
 .reveal table th{background:var(--navy);color:#fff;padding:10px 16px;font-weight:700}
 .reveal table td{padding:10px 16px;border-bottom:1px solid var(--azul-claro)}
 .reveal table td:first-child{font-weight:700;background:var(--tint)}
+
+/* callouts */
 .reveal .callout{font-size:.64em;margin:14px 0;border-radius:10px}
-.reveal .callout-warning{border-left-color:var(--verm)!important}.reveal .callout-note{border-left-color:var(--azul)!important}
+.reveal .callout-warning{border-left-color:var(--verm)!important}
+.reveal .callout-note{border-left-color:var(--azul)!important}
+
+/* mermaid */
 .reveal .mermaid svg{max-width:100%;height:auto}
-.fonte{position:absolute;bottom:-34px;left:0;font-size:.34em;color:var(--cinza)}
-.passos{counter-reset:p}.passo{font-size:.62em}
-
-/* ===== Slide Final ===== */
-.reveal .final-slide {
-  background: url("media/final.png");
-
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  color: white;
-}
-.reveal section.title-slide.final-slide,
-.reveal section.title-slide.final-slide h1 {
-  background: none !important;
-  background-color: transparent !important;
-  font-size: 2.5em !important;
-  background-image: none !important;
-}
