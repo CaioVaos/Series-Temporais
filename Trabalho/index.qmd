@@ -32,61 +32,8 @@ execute:
   warning: false
   message: false
 ---
-
-```{r}
-#| label: setup
-#| include: false
-```
-
-<!-- ================= RESPOSTA PRIMEIRO ================= -->
-
-## A pergunta {.dark .sem-titulo auto-animate="true" background-gradient="linear-gradient(135deg,#082F4A 0%,#0C446B 60%,#1F7C9C 100%)"}
-
-::: {.hero data-id="pergunta" style="margin-top:230px;font-size:4.2em"}
-Manter ou pausar?
-:::
-
-## A pergunta {.dark .sem-titulo auto-animate="true" background-gradient="linear-gradient(135deg,#082F4A 0%,#0C446B 60%,#1F7C9C 100%)"}
-
-::: {.hero data-id="pergunta" style="margin-top:20px;font-size:2.6em"}
-Manter ou pausar?
-:::
-
-## Recomendamos suspender as campanhas publicitárias {data-tracker="RESUMO EXECUTIVO"}
-
-::: {.subtitulo}
-Pausar abre espaço para reconstruir a reputação e recalibrar a imagem da marca junto ao público
-:::
-
-:::: {.resumo}
-::: {.resposta}
-<small>A Alaska Airlines deve</small>
-**PAUSAR**
-<span class="resposta-sub">as campanhas durante a crise</span>
-:::
-
-::: {.resumo-args}
-::: {.card .fragment}
-<h4><span class="num">1</span>Diagnóstico</h4>
-Causa raiz da crise e lacuna entre a situação atual e a desejada: \[a preencher\]
-:::
-::: {.card .fragment}
-<h4><span class="num">2</span>Viabilidade e impacto</h4>
-Valor criado pela pausa e variação entre os cenários: \[a preencher\]
-:::
-::: {.card .fragment}
-<h4><span class="num">3</span>Execução e riscos</h4>
-Capacidade de executar a pausa e riscos mitigados: \[a preencher\]
-:::
-:::
-::::
-
-
-<!-- ================= 01 · O PROBLEMA ================= -->
-
-# O problema {data-num="01" background-image="img/capa.png" background-size="260%" background-position="8% 92%"}
-
-Uma empresa, uma crise, uma decisão comercial.
+     
+<!-- ================= 2 · SITUAÇÃO · COMPLICAÇÃO · QUESTÃO ================= -->
 
 ## A crise de 2024 abalou a confiança na Alaska, e a empresa precisa decidir se mantém suas campanhas publicitárias {data-tracker="SITUAÇÃO · COMPLICAÇÃO · QUESTÃO"}
 
@@ -122,63 +69,65 @@ Manter as campanhas durante a crise ou pausá-las até a reputação se recupera
 :::
 ::::
 
-::: {.scq-resposta .fragment}
-<span class="rot">RESPOSTA</span>
-<span class="txt"><b>Pausar</b> as campanhas até a reputação se recuperar, em três etapas: diagnóstico, viabilidade e execução.</span>
+::: notes
+Roteiro: a situação é o que o público já sabe; a complicação cria a tensão; a pergunta é a que o executivo faz na cabeça. Não adiantar a resposta aqui.
 :::
 
 
-<!-- ================= 02 · ANÁLISE ================= -->
+<!-- ================= 3 · RESPOSTA + LINHA-CHAVE ================= -->
 
-# Análise {data-num="02" background-image="img/capa.png" background-size="240%" background-position="50% 50%"}
-
-Do diagnóstico à execução, três pilares sustentam a recomendação.
-
-## Três pilares sustentam a recomendação de [pausar] as campanhas {data-tracker="CORPO · LINHA-CHAVE"}
+## Recomendamos pausar as campanhas até a reputação da Alaska se recuperar, por três razões {data-tracker="RESPOSTA · LINHA-CHAVE"}
 
 ::: {.pir-topo}
-<span class="rot">RECOMENDAÇÃO</span> <b>\[Pausar as campanhas durante a crise\]</b>
+<span class="rot">RECOMENDAÇÃO</span> <b>Pausar as campanhas durante a crise</b>
 :::
 
 :::: {.pir}
 ::: {.pir-col .p1 .fragment}
 <span class="pir-n">1</span>
 
-<h4>Análise factual e diagnóstico</h4>
+<h4>A crise \[reduziu\] o interesse por "Alaska Airlines" em \[X%\] e ele \[ainda não voltou\]</h4>
 
-<span class="pir-q">Entendemos o problema na origem, não só nos sintomas?</span>
-
-- Árvore de lógica (MECE)
-- Mapa de causa e efeito
-- Lacuna R1 × R2
+<span class="pir-q">Teste: série Yt e quebra estrutural</span>
 :::
 
 ::: {.pir-col .p2 .fragment}
 <span class="pir-n">2</span>
 
-<h4>Viabilidade e impacto econômico</h4>
+<h4>Pausar \[preserva\] \[R$ X\] de valor frente a manter, mesmo no cenário pessimista</h4>
 
-<span class="pir-q">Quanto valor a solução cria e com que variação?</span>
-
-- Direcionadores de valor
-- Lucro econômico (ROIC × WACC)
-- Análise de cenários
+<span class="pir-q">Teste: previsão SARIMA e cenários com probabilidade</span>
 :::
 
 ::: {.pir-col .p3 .fragment}
 <span class="pir-n">3</span>
 
-<h4>Execução e riscos</h4>
+<h4>A Alaska consegue pausar e retomar em \[N\] fases, com riscos controlados</h4>
 
-<span class="pir-q">Conseguimos realizar isso na prática?</span>
-
-- Capacidades internas
-- Governança e riscos
-- Roadmap e stage gates
+<span class="pir-q">Teste: capacidades, riscos e roadmap</span>
 :::
 ::::
 
-## Pilar 1 · [Título de ação: a causa raiz do problema é ...] {data-tracker="PILAR 1 · ANÁLISE FACTUAL E DIAGNÓSTICO"}
+::: notes
+A resposta vem primeiro. As três ideias são as razões paralelas da recomendação e voltam, com as mesmas palavras, no título do slide de abertura de cada pilar.
+:::
+
+
+<!-- ================= 4 · PILAR 1 · DIAGNÓSTICO ================= -->
+
+# O que a crise fez com o interesse pela Alaska? {data-num="01" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+
+Pilar 1 · Diagnóstico: entender o problema na origem, não só nos sintomas.
+
+::: chips
+<span class="on">Diagnóstico</span><span>Viabilidade e impacto</span><span>Execução e riscos</span><span>Próximos passos</span>
+:::
+
+::: notes
+Este slide faz a pergunta do pilar. A resposta, que é a ideia do pilar, vem no slide seguinte.
+:::
+
+## Pilar 1 · A crise [reduziu] o interesse por "Alaska Airlines" em [X%] e ele [ainda não voltou] {data-tracker="PILAR 1 · DIAGNÓSTICO"}
 
 ::::: {.pilar .p1}
 ::: {.pilar-lado}
@@ -186,7 +135,7 @@ Do diagnóstico à execução, três pilares sustentam a recomendação.
 
 <span class="pilar-n">1</span>
 
-<h4>Análise factual e diagnóstico</h4>
+<h4>Diagnóstico</h4>
 
 <span class="pilar-sub">Causa raiz</span>
 
@@ -195,42 +144,84 @@ Do diagnóstico à execução, três pilares sustentam a recomendação.
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>Árvore de lógica (MECE)</h4>
+<h4><span class="num">a</span>O interesse \[caiu\] após jan/2024</h4>
 ::: {.bloco-visual}
-Exhibit: árvore de lógica
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: série Yt com a data da crise
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Mapa de causa e efeito</h4>
+<h4><span class="num">b</span>Há uma lacuna de \[X pontos\] frente ao nível esperado</h4>
 ::: {.bloco-visual}
-Exhibit: cadeia causal
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: observado × esperado (R1 × R2)
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>Lacuna R1 × R2</h4>
+<h4><span class="num">c</span>A queda \[não é\] sazonalidade</h4>
 ::: {.bloco-visual}
-Exhibit: situação atual × resultado almejado
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: decomposição da série
 :::
 :::
 ::::
 :::::
 
-::: fonte
-Fonte: \[fonte dos dados\]; elaboração própria
+::: notes
+Ideia do pilar 1 = título do slide. Os três blocos são os pontos de apoio, cada um com um slide de exhibit a seguir.
 :::
 
-## Pilar 2 · [Título de ação: a solução cria R$ X de valor, com variação entre A e B] {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO ECONÔMICO"}
+## Pilar 1 · O interesse por "Alaska Airlines" [caiu X%] após a crise de jan/2024 {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** gráfico de linhas da série Yt, com a data da crise marcada e a quebra estrutural<br><small>Pergunta que o gráfico responde: o que mudou ao longo do tempo?</small>
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; elaboração própria
+:::
+
+## Pilar 1 · O interesse está [X pontos] abaixo do nível que teria sem a crise {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** série observada × projeção do modelo ajustado antes da crise, com a lacuna destacada<br><small>Pergunta que o gráfico responde: como o observado se compara ao esperado?</small>
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; modelagem do grupo (R)
+:::
+
+## Pilar 1 · A queda [não é] explicada pela sazonalidade da série {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** decomposição em tendência, sazonalidade e resíduo<br><small>Pergunta que o gráfico responde: quais são os elementos da série?</small>
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; modelagem do grupo (R)
+:::
+
+
+<!-- ================= 5 · PILAR 2 · VIABILIDADE E IMPACTO ================= -->
+
+# Quanto vale pausar frente a manter as campanhas? {data-num="02" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+
+Pilar 2 · Viabilidade e impacto: valor criado e variação entre os cenários.
+
+::: chips
+<span>Diagnóstico</span><span class="on">Viabilidade e impacto</span><span>Execução e riscos</span><span>Próximos passos</span>
+:::
+
+::: notes
+Pergunta do pilar 2. Mostrar sempre mais de um cenário, incluindo um de perda.
+:::
+
+## Pilar 2 · Pausar [preserva] [R$ X] de valor frente a manter, mesmo no cenário pessimista {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
 
 ::::: {.pilar .p2}
 ::: {.pilar-lado}
@@ -238,7 +229,7 @@ Fonte: \[fonte dos dados\]; elaboração própria
 
 <span class="pilar-n">2</span>
 
-<h4>Viabilidade e impacto econômico</h4>
+<h4>Viabilidade e impacto</h4>
 
 <span class="pilar-sub">Ganhos e valor</span>
 
@@ -247,42 +238,84 @@ Fonte: \[fonte dos dados\]; elaboração própria
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>Direcionadores de valor</h4>
+<h4><span class="num">a</span>O interesse volta ao padrão em \[h\] períodos</h4>
 ::: {.bloco-visual}
-Exhibit: ROIC × crescimento → fluxo de caixa livre
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: previsão SARIMA com intervalo de confiança
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Lucro econômico</h4>
+<h4><span class="num">b</span>Pausar vale \[R$ X\] a mais que manter em \[cenário\]</h4>
 ::: {.bloco-visual}
-Exhibit: ROIC × WACC
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: cenários com probabilidade
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>Análise de cenários</h4>
+<h4><span class="num">c</span>A verba liberada \[gera\] \[R$ X\] de lucro econômico</h4>
 ::: {.bloco-visual}
-Exhibit: base · otimista · conservador
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: ROIC × custo de capital
 :::
 :::
 ::::
 :::::
 
-::: fonte
-Fonte: \[fonte dos dados\]; modelagem do grupo
+::: notes
+O bloco c só entra se houver dados financeiros da Alaska (capital investido, ROIC, WACC). Sem eles, apague o bloco e o slide de exhibit correspondente. Mostrar sempre mais de um cenário, incluindo um de perda, em vez de um número único.
 :::
 
-## Pilar 3 · [Título de ação: a Alaska consegue executar a recomendação em N fases] {data-tracker="PILAR 3 · CAPACIDADE DE EXECUÇÃO E RISCOS"}
+## Pilar 2 · O interesse por "Alaska Airlines" deve [recuperar-se] em [h] períodos {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** previsão SARIMA com intervalos de confiança de 80% e 95%<br><small>Pergunta que o gráfico responde: o que muda daqui para frente?</small>
+:::
+::::
+
+::: fonte
+Fonte: Google Trends; modelo SARIMA \[(p,d,q)(P,D,Q)s\]
+:::
+
+## Pilar 2 · Em [cenário], pausar vale [R$ X] a mais do que manter as campanhas {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** valor de cada decisão (manter × ajustar × pausar) nos cenários otimista, base e pessimista, com a probabilidade de cada um<br><small>Pergunta que o gráfico responde: como os valores se comparam entre si?</small>
+:::
+::::
+
+::: fonte
+Fonte: modelagem do grupo; premissas do grupo
+:::
+
+## Pilar 2 · A verba liberada pela pausa [gera] [R$ X] de lucro econômico {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** retorno da campanha frente ao custo de capital<br><small>Pergunta que o gráfico responde: como os itens se comparam entre si? (só com dados financeiros)</small>
+:::
+::::
+
+::: fonte
+Fonte: \[relatórios financeiros da Alaska\]; elaboração própria
+:::
+
+
+<!-- ================= 6 · PILAR 3 · EXECUÇÃO E RISCOS ================= -->
+
+# A Alaska consegue executar a pausa e a retomada? {data-num="03" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+
+Pilar 3 · Execução e riscos: capacidade, riscos e roadmap em fases.
+
+::: chips
+<span>Diagnóstico</span><span>Viabilidade e impacto</span><span class="on">Execução e riscos</span><span>Próximos passos</span>
+:::
+
+::: notes
+Pergunta do pilar 3: conseguimos realizar isso na prática?
+:::
+
+## Pilar 3 · A Alaska consegue pausar e retomar as campanhas em [N] fases, com riscos controlados {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
 
 ::::: {.pilar .p3}
 ::: {.pilar-lado}
@@ -299,47 +332,82 @@ Fonte: \[fonte dos dados\]; modelagem do grupo
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>Capacidades internas</h4>
+<h4><span class="num">a</span>A Alaska tem capacidade para pausar e retomar</h4>
 ::: {.bloco-visual}
-Exhibit: talento · operação · tecnologia · dados
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: contratos, equipe e monitoramento
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Governança e riscos</h4>
+<h4><span class="num">b</span>Os \[N\] riscos principais têm mitigação e dono</h4>
 ::: {.bloco-visual}
-Exhibit: matriz de riscos e mitigação
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: matriz de riscos
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>Roadmap e stage gates</h4>
+<h4><span class="num">c</span>A retomada em fases limita o risco</h4>
 ::: {.bloco-visual}
-Exhibit: fases, piloto, expansão e marcos
-:::
-::: {.bloco-msg}
-\[mensagem do bloco\]
+Exhibit: fases e marcos de validação
 :::
 :::
 ::::
 :::::
 
+::: notes
+Capacidade aqui significa: contratos de mídia que podem ser pausados, equipe e agência para retomar, e dados para monitorar o interesse. Os riscos ficam só neste pilar, para os pilares serem mutuamente exclusivos.
+:::
+
+## Pilar 3 · A Alaska tem [os contratos, a equipe e os dados] necessários para pausar e retomar {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** quadro de capacidades (contratos de mídia, equipe, dados), com o status de cada uma<br><small>Pergunta que o gráfico responde: quais são os elementos?</small>
+:::
+::::
+
 ::: fonte
-Fonte: \[fonte dos dados\]; análise do grupo
+Fonte: \[informações da empresa\]; análise do grupo
+:::
+
+## Pilar 3 · Os [N] riscos principais da pausa têm mitigação e responsável definidos {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** matriz de riscos (probabilidade × impacto), com a mitigação e o responsável de cada um<br><small>Pergunta que o gráfico responde: como os itens se distribuem?</small>
+:::
+::::
+
+::: fonte
+Fonte: análise do grupo
+:::
+
+## Pilar 3 · A retomada em [N] fases, com marcos de validação, limita o risco da decisão {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+
+:::: {.ex}
+::: {.bloco-visual}
+**Exhibit:** roadmap em fases (pausa, piloto de retomada, escala), com os marcos de validação e os gatilhos de revisão<br><small>Pergunta que o gráfico responde: como as etapas se encadeiam no tempo?</small>
+:::
+::::
+
+::: fonte
+Fonte: plano de implementação proposto pelo grupo
 :::
 
 
-<!-- ================= 03 · PRÓXIMOS PASSOS ================= -->
+<!-- ================= 7 · PRÓXIMOS PASSOS ================= -->
 
-# Próximos passos {data-num="03" background-image="img/capa.png" background-size="230%" background-position="85% 15%"}
+# O que a Alaska faz na segunda-feira de manhã? {data-num="04" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
 
-O que aprendemos com a crise passada e como conduzir a próxima.
+Próximos passos: ações, responsáveis e prazos para os primeiros 30 dias.
+
+::: chips
+<span>Diagnóstico</span><span>Viabilidade e impacto</span><span>Execução e riscos</span><span class="on">Próximos passos</span>
+:::
+
+::: notes
+Fecha a linha-chave: se a audiência aceita as três razões, o que ela autoriza agora.
+:::
 
 ## A mobilização nos primeiros 30 dias garante uma pausa ordenada e a retomada no momento certo {data-tracker="PRÓXIMOS PASSOS"}
 
@@ -389,8 +457,106 @@ O que aprendemos com a crise passada e como conduzir a próxima.
 Fonte: plano de implementação proposto pelo grupo
 :::
 
+::: notes
+Cada ação precisa ser um produto final verificável, com dono e prazo. O interesse de busca (Yt) é o indicador antecedente para decidir a retomada.
+:::
 
-<!-- ================= SLIDE FINAL ================= -->
+
+<!-- ================= APÊNDICE (OCULTO) ================= -->
+
+## Apêndice · Dados públicos e um pipeline reproduzível sustentam a série Yt {visibility="hidden" data-tracker="APÊNDICE"}
+
+```{mermaid}
+%%| fig-width: 14
+%%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#4F6882'}}}%%
+graph LR
+  P["<b>Python</b><br/>download dos dados"]:::t --> D["<b>CSV bruto</b><br/>01/01/2022–23/10/2026"]:::d --> R["<b>R</b><br/>ARIMA / SARIMA"]:::t --> Q["<b>Quarto</b><br/>slides + relatório"]:::t
+  classDef t fill:#0C446B,color:#fff,stroke:#0C446B
+  classDef d fill:#DCE7F1,color:#082F4A,stroke:#44ABC3
+```
+
+| Item | Definição |
+|:--------|:-----------------------------------------------|
+| Variável Yt | Índice de interesse (0 a 100) do Google Trends para "Alaska Airlines" |
+| Alternativa | Quantidade de notícias associadas ao termo (a avaliar) |
+| Frequência · Região | \[semanal ou mensal\] · \[EUA ou mundial\] — definir |
+| Tratamento | \[faltantes, outliers e suavização\] — definir |
+
+## Apêndice · Estacionariedade e ACF/PACF definem as ordens candidatas do modelo [a confirmar] {visibility="hidden" data-tracker="APÊNDICE"}
+
+::: panel-tabset
+### ACF
+
+```{r}
+#| label: fig-acf
+#| output: asis
+#| fig-width: 12
+#| fig-height: 4.6
+```
+
+### PACF
+
+```{r}
+#| label: fig-pacf
+#| output: asis
+#| fig-width: 12
+#| fig-height: 4.6
+```
+
+### ADF e KPSS
+
+```{r}
+#| label: tab-adf-kpss
+#| output: asis
+```
+
+### Decomposição
+
+```{r}
+#| label: fig-decomp
+#| output: asis
+#| fig-width: 12
+#| fig-height: 5
+```
+:::
+
+## Apêndice · O modelo SARIMA escolhido passa no diagnóstico de resíduos [a confirmar] {visibility="hidden" data-tracker="APÊNDICE"}
+
+:::: {.columns}
+::: {.column width="46%"}
+| Modelo | AIC | BIC | RMSE |
+|:----------------------|:--:|:--:|:--:|
+| Candidato 1 (p,d,q)(P,D,Q)s | — | — | — |
+| Candidato 2 (p,d,q)(P,D,Q)s | — | — | — |
+| Candidato 3 (p,d,q)(P,D,Q)s | — | — | — |
+| Referência: auto.arima | — | — | — |
+
+::: {.callout-note appearance="minimal"}
+**Critério de escolha.** \[definir: menor AIC/BIC, resíduos como ruído branco e boa validação fora da amostra\]
+:::
+:::
+::: {.column width="54%"}
+```{r}
+#| label: fig-residuos
+#| output: asis
+#| fig-width: 10
+#| fig-height: 6
+```
+:::
+::::
+
+## Apêndice · Esqueleto do modelo em R {visibility="hidden" data-tracker="APÊNDICE"}
+
+```{.r code-line-numbers="2-5"}
+serie  <- ts(yt$interesse, frequency = 52)
+adf.test(serie); kpss.test(serie)                       # estacionariedade
+ajuste <- Arima(serie, order = c(p, d, q), seasonal = c(P, D, Q))
+checkresiduals(ajuste)                                  # diagnóstico (Ljung-Box)
+prev   <- forecast(ajuste, h = 26, level = c(80, 95))   # previsão com IC
+```
+
+
+<!-- ================= 8 · SLIDE FINAL ================= -->
 
 ## {.final-slide .title-slide .sem-titulo background-image="img/final.png" background-size="cover" background-position="center" data-state="hide-footer"}
 

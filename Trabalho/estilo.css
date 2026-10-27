@@ -339,6 +339,10 @@
   padding-left:12px; border-left:4px solid var(--pa); color:var(--cinza); line-height:1.4;
 }
 
+/* ===== Slide de exhibit: um gráfico, uma mensagem ===== */
+.reveal .ex{display:flex; height:580px; margin-top:20px}
+.reveal .ex .bloco-visual{margin:0; font-size:1em; line-height:1.5}
+.reveal .ex .bloco-visual small{display:block; margin-top:.6em; font-size:.7em; color:var(--cinza)}
 
 /* ========== 12. SLIDE: PRÓXIMOS PASSOS (tabela de governança) ========== */
 .reveal .np{margin-top:18px; font-size:.66em; counter-reset:np}
