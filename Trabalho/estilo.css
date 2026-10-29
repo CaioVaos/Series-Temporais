@@ -201,43 +201,50 @@
 
 /* ========== 9. SLIDE: S-C-Q ========== */
 .reveal .scq{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:44px;
-  margin-top:26px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:48px;
+  margin-top:30px;
 }
 .reveal .scq-col{
   --c:var(--aco);
   position:relative; display:flex; flex-direction:column;
-  min-height:340px; padding:36px 38px 30px;
-  background:var(--tint); border-radius:14px; border-top:7px solid var(--c);
-  font-size:.7em; line-height:1.5; box-shadow:var(--sombra-card);
+  min-height:560px; padding:46px 46px 38px;
+  background:var(--tint); border-radius:14px; border-top:8px solid var(--c);
+  font-size:.86em; line-height:1.5; box-shadow:var(--sombra-card);
 }
 .reveal .scq-col.c{--c:var(--verm)}
 .reveal .scq-col.q{--c:var(--azul)}
 
 /* letra grande vazada no canto */
 .reveal .scq-letra{
-  position:absolute; top:10px; right:26px;
-  font:700 5.6em var(--serif); line-height:1;
+  position:absolute; top:14px; right:30px;
+  font:700 6em var(--serif); line-height:1;
   color:transparent; -webkit-text-stroke:2px var(--c); opacity:.45;
 }
-.reveal .scq-col h4{margin:0; font:700 1.6em var(--serif); color:var(--navy)}
+.reveal .scq-col h4{margin:0; font:700 1.7em var(--serif); color:var(--navy)}
 .reveal .scq-rot{
-  display:block; margin:.35em 0 1.1em;
+  display:block; margin:.35em 0 1.4em;
   font:700 .62em var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--cinza);
 }
 .reveal .scq-col p{margin:0}
 
+/* dado no pé do card */
+.reveal .scq-dado{
+  margin-top:auto; padding-top:22px; border-top:1px solid rgba(12,68,107,.15);
+}
+.reveal .scq-dado p{display:flex; align-items:center; gap:20px; font-size:.78em; line-height:1.3; color:var(--cinza)}
+.reveal .scq-dado strong{font:700 2.8em var(--serif); line-height:1; color:var(--navy)}
+
 /* seta entre as colunas */
 .reveal .scq-col.s::after,
 .reveal .scq-col.c::after{
-  content:"›"; position:absolute; top:50%; right:-41px; transform:translateY(-50%);
+  content:"›"; position:absolute; top:50%; right:-43px; transform:translateY(-50%);
   width:38px; height:38px; z-index:2;
   display:flex; align-items:center; justify-content:center;
   background:var(--navy); color:#fff; border-radius:50%;
   font:700 1.5em/1 var(--sans); padding-bottom:4px; box-sizing:border-box;
 }
 
-/* faixa de resposta */
+/* faixa de resposta (não usada hoje) */
 .reveal .scq-resposta{
   margin-top:30px; padding:24px 40px; border-radius:14px; color:#fff;
   background:var(--grad-navy); box-shadow:var(--sombra-destaque);
@@ -345,27 +352,27 @@
 .reveal .ex .bloco-visual small{display:block; margin-top:.6em; font-size:.7em; color:var(--cinza)}
 
 /* ========== 12. SLIDE: PRÓXIMOS PASSOS (tabela de governança) ========== */
-.reveal .np{margin-top:18px; font-size:.66em; counter-reset:np}
+.reveal .np{margin-top:20px; font-size:.76em; counter-reset:np}
 .reveal .np p{display:contents; margin:0}   /* os spans viram células da grade */
 
 .reveal .np-head,
 .reveal .np-row{
   display:grid; grid-template-columns:2fr 3.4fr 1.5fr 1.9fr 1.6fr;
-  column-gap:20px; align-items:center; padding:0 26px;
+  column-gap:24px; align-items:center; padding:0 30px;
 }
 .reveal .np-head{
-  padding-top:13px; padding-bottom:13px; border-radius:10px 10px 0 0;
+  padding-top:16px; padding-bottom:16px; border-radius:10px 10px 0 0;
   background:var(--navy); color:#fff;
   font:700 .74em var(--sans); letter-spacing:.12em; text-transform:uppercase;
 }
 .reveal .np-row{
-  counter-increment:np; padding-top:17px; padding-bottom:17px;
+  counter-increment:np; min-height:106px; padding-top:0; padding-bottom:0;
   background:var(--tint); border-bottom:4px solid #fff;
 }
 
 /* frente de trabalho, com número automático */
 .reveal .np .frente{
-  display:flex; align-items:center; gap:14px;
+  display:flex; align-items:center; gap:16px;
   font:700 1.18em var(--serif); color:var(--navy); line-height:1.15;
 }
 .reveal .np .frente::before{
@@ -375,13 +382,13 @@
 }
 .reveal .np .acao{line-height:1.35}
 .reveal .np .resp{
-  justify-self:start; padding:5px 16px; border-radius:30px;
+  justify-self:start; padding:6px 18px; border-radius:30px;
   background:#fff; border:1.5px solid var(--azul-claro); color:var(--navy); font-weight:700; font-size:.92em;
 }
 .reveal .np .rec{color:var(--cinza); line-height:1.3}
 
 /* prazo: fase + marco */
-.reveal .np .prazo{display:flex; flex-direction:column; align-items:flex-start; gap:7px}
+.reveal .np .prazo{display:flex; flex-direction:column; align-items:flex-start; gap:8px}
 .reveal .np .gate{font:700 .78em var(--sans); letter-spacing:.06em; color:var(--cinza)}
 
 /* fases (tabela e legenda) */
@@ -395,10 +402,10 @@
 
 /* faixa inferior: legenda das fases + KPIs */
 .reveal .np-rodape{
-  display:flex; align-items:center; gap:16px; margin-top:20px; padding:14px 26px;
+  display:flex; align-items:center; gap:18px; margin-top:26px; padding:18px 30px;
   border:2px solid var(--azul-claro); border-radius:10px; font-size:.92em;
 }
-.reveal .np-rodape p{display:flex; align-items:center; gap:16px; width:100%; margin:0}
+.reveal .np-rodape p{display:flex; align-items:center; gap:18px; width:100%; margin:0}
 .reveal .np-rodape .rot{font:700 .72em var(--sans); letter-spacing:.16em; color:var(--cinza)}
 .reveal .np-rodape .kpis{margin-left:auto; color:var(--cinza); font-weight:700}
 
@@ -567,3 +574,8 @@
 
 /* mermaid */
 .reveal .mermaid svg{max-width:100%;height:auto}
+
+/* ===== Divisores: pergunta + agenda ===== */
+.reveal section[data-num] h1{font-size:2.3em; width:62%}
+.reveal section[data-num] .chips p{display:contents; width:auto}
+.chips span.on{background:var(--ciano); border-color:var(--ciano); color:var(--navy-deep); font-weight:700}

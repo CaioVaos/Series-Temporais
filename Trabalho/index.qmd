@@ -32,10 +32,8 @@ execute:
   warning: false
   message: false
 ---
-     
-<!-- ================= 2 · SITUAÇÃO · COMPLICAÇÃO · QUESTÃO ================= -->
 
-## A crise de 2024 abalou a confiança na Alaska, e a empresa precisa decidir se mantém suas campanhas publicitárias {data-tracker="SITUAÇÃO · COMPLICAÇÃO · QUESTÃO"}
+## A cada crise a atenção à Alaska dispara, e a empresa precisa decidir se mantém suas campanhas e por quanto tempo {data-tracker="SITUAÇÃO · COMPLICAÇÃO · QUESTÃO"}
 
 :::: {.scq}
 ::: {.scq-col .s .fragment}
@@ -45,7 +43,11 @@ execute:
 
 <span class="scq-rot">O ponto de partida</span>
 
-A Alaska Airlines é uma das maiores companhias aéreas dos EUA e investe de forma contínua em campanhas para sustentar a demanda. \[confirmar dados\]
+A Alaska Airlines é uma das maiores companhias aéreas dos EUA e investe de forma contínua em campanhas promocionais e institucionais. \[confirmar dados\]
+
+::: {.scq-dado}
+**2012** início da série de buscas no Google Trends (EUA)
+:::
 :::
 
 ::: {.scq-col .c .fragment}
@@ -55,7 +57,11 @@ A Alaska Airlines é uma das maiores companhias aéreas dos EUA e investe de for
 
 <span class="scq-rot">O evento perturbador</span>
 
-Em jan/2024, o incidente do Voo 1282 abalou a confiança do público e abriu uma crise de reputação. \[efeito medido\]
+Em jan/2024, o painel de uma porta se soltou em pleno voo (voo 1282) e, em jul e out/2025, panes de informática suspenderam as decolagens. A cada crise, a atenção à marca dispara.
+
+::: {.scq-dado}
+**9** crises analisadas, de ago/2018 a out/2025
+:::
 :::
 
 ::: {.scq-col .q .fragment}
@@ -65,57 +71,61 @@ Em jan/2024, o incidente do Voo 1282 abalou a confiança do público e abriu uma
 
 <span class="scq-rot">A pergunta central</span>
 
-Manter as campanhas durante a crise ou pausá-las até a reputação se recuperar?
+Manter as campanhas durante a crise ou pausá-las, e por quanto tempo?
+
+::: {.scq-dado}
+**2** decisões: manter ou pausar, e por quanto tempo
+:::
 :::
 ::::
 
 ::: notes
-Roteiro: a situação é o que o público já sabe; a complicação cria a tensão; a pergunta é a que o executivo faz na cabeça. Não adiantar a resposta aqui.
+Roteiro: a situação é o que o público já sabe; a complicação cria a tensão (nove crises entre ago/2018 e out/2025); a pergunta é a que a área de marketing faz: pausar evita que a publicidade apareça ao lado das notícias da crise, mas pausar além do necessário custa vendas. Não adiantar a resposta aqui.
 :::
 
 
 <!-- ================= 3 · RESPOSTA + LINHA-CHAVE ================= -->
 
-## Recomendamos pausar as campanhas até a reputação da Alaska se recuperar, por três razões {data-tracker="RESPOSTA · LINHA-CHAVE"}
+## Recomendamos pausar as campanhas só até a atenção à Alaska voltar ao normal, por três razões {data-tracker="RESPOSTA · LINHA-CHAVE"}
 
 ::: {.pir-topo}
-<span class="rot">RECOMENDAÇÃO</span> <b>Pausar as campanhas durante a crise</b>
+<span class="rot">RECOMENDAÇÃO</span> <b>Pausar as campanhas na crise e retomá-las quando a atenção voltar ao normal</b>
 :::
 
 :::: {.pir}
 ::: {.pir-col .p1 .fragment}
 <span class="pir-n">1</span>
 
-<h4>A crise \[reduziu\] o interesse por "Alaska Airlines" em \[X%\] e ele \[ainda não voltou\]</h4>
+<h4>A cada crise a atenção à Alaska dispara e, nas buscas, volta ao normal em 1 a 19 dias</h4>
 
-<span class="pir-q">Teste: série Yt e quebra estrutural</span>
+<span class="pir-q">Teste: busca diária e intervalo contrafactual em nove crises</span>
 :::
 
 ::: {.pir-col .p2 .fragment}
 <span class="pir-n">2</span>
 
-<h4>Pausar \[preserva\] \[R$ X\] de valor frente a manter, mesmo no cenário pessimista</h4>
+<h4>O AR(1) prevê no dia da crise quando a atenção volta, com erro médio de 4,2 dias nas crises de teste</h4>
 
-<span class="pir-q">Teste: previsão SARIMA e cenários com probabilidade</span>
+<span class="pir-q">Teste: previsão no dia da crise, validação e teste</span>
 :::
 
 ::: {.pir-col .p3 .fragment}
 <span class="pir-n">3</span>
 
-<h4>A Alaska consegue pausar e retomar em \[N\] fases, com riscos controlados</h4>
+<h4>A regra de retomada usa dados públicos, é refeita todo dia e tem riscos conhecidos</h4>
 
-<span class="pir-q">Teste: capacidades, riscos e roadmap</span>
+<span class="pir-q">Teste: regra dos 7 dias, riscos e gatilhos</span>
 :::
 ::::
 
 ::: notes
-A resposta vem primeiro. As três ideias são as razões paralelas da recomendação e voltam, com as mesmas palavras, no título do slide de abertura de cada pilar.
+A resposta vem primeiro. As três ideias são as razões paralelas da recomendação e voltam, com as mesmas palavras, no título do slide de abertura de cada pilar. Pausar tem prazo: de 1 a 6 dias nas panes de informática e na falha do sistema de peso, e até 19 dias nas crises de operação e de segurança.
 :::
 
 
 <!-- ================= 4 · PILAR 1 · DIAGNÓSTICO ================= -->
 
-# O que a crise fez com o interesse pela Alaska? {data-num="01" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+# O que a crise faz com a atenção à Alaska? {data-num="01" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
 
 Pilar 1 · Diagnóstico: entender o problema na origem, não só nos sintomas.
 
@@ -127,7 +137,7 @@ Pilar 1 · Diagnóstico: entender o problema na origem, não só nos sintomas.
 Este slide faz a pergunta do pilar. A resposta, que é a ideia do pilar, vem no slide seguinte.
 :::
 
-## Pilar 1 · A crise [reduziu] o interesse por "Alaska Airlines" em [X%] e ele [ainda não voltou] {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+## Pilar 1 · A cada crise a atenção à Alaska dispara e, nas buscas, volta ao normal em 1 a 19 dias {data-tracker="PILAR 1 · DIAGNÓSTICO"}
 
 ::::: {.pilar .p1}
 ::: {.pilar-lado}
@@ -144,84 +154,84 @@ Este slide faz a pergunta do pilar. A resposta, que é a ideia do pilar, vem no 
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>O interesse \[caiu\] após jan/2024</h4>
+<h4><span class="num">a</span>No voo 1282, a busca chegou a 55, cinco vezes o nível de dezembro</h4>
 ::: {.bloco-visual}
-Exhibit: série Yt com a data da crise
+Exhibit: série diária e intervalo contrafactual
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Há uma lacuna de \[X pontos\] frente ao nível esperado</h4>
+<h4><span class="num">b</span>Nas buscas, a atenção volta ao normal em 1 a 19 dias</h4>
 ::: {.bloco-visual}
-Exhibit: observado × esperado (R1 × R2)
+Exhibit: dias até a volta, em cada crise
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>A queda \[não é\] sazonalidade</h4>
+<h4><span class="num">c</span>Nas notícias, a volta demora mais: 21 e 39 dias nas crises de segurança</h4>
 ::: {.bloco-visual}
-Exhibit: decomposição da série
+Exhibit: buscas × notícias
 :::
 :::
 ::::
 :::::
 
 ::: notes
-Ideia do pilar 1 = título do slide. Os três blocos são os pontos de apoio, cada um com um slide de exhibit a seguir.
+Ideia do pilar 1 = título do slide. O diagnóstico mostra que a crise não derruba o interesse: ela o dispara por poucos dias ou semanas, e a atenção volta ao patamar habitual. É isso que torna a pausa curta e com prazo. Os três blocos são os pontos de apoio, cada um com um slide de exhibit a seguir.
 :::
 
-## Pilar 1 · O interesse por "Alaska Airlines" [caiu X%] após a crise de jan/2024 {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+## Pilar 1 · No voo 1282, a busca chegou a 55, cinco vezes o nível de dezembro de 2023 {data-tracker="PILAR 1 · DIAGNÓSTICO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** gráfico de linhas da série Yt, com a data da crise marcada e a quebra estrutural<br><small>Pergunta que o gráfico responde: o que mudou ao longo do tempo?</small>
+**Exhibit:** série diária do interesse de busca (jan/2012 a out/2026) com as nove crises marcadas e, em detalhe, o voo 1282 com o intervalo contrafactual de 95%<br><small>Pergunta que o gráfico responde: o que mudou ao longo do tempo?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: Google Trends; elaboração própria
+Fonte: Google Trends; elaboração própria (2026)
 :::
 
-## Pilar 1 · O interesse está [X pontos] abaixo do nível que teria sem a crise {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+## Pilar 1 · Nas buscas, a atenção volta ao normal em 1 a 19 dias, conforme a crise {data-tracker="PILAR 1 · DIAGNÓSTICO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** série observada × projeção do modelo ajustado antes da crise, com a lacuna destacada<br><small>Pergunta que o gráfico responde: como o observado se compara ao esperado?</small>
+**Exhibit:** barras com os dias até a volta ao normal nas buscas, nas nove crises (de 1 dia na falha do sistema de peso a 19 dias na neve em Seattle)<br><small>Pergunta que o gráfico responde: como as crises se comparam entre si?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: Google Trends; modelagem do grupo (R)
+Fonte: Google Trends; elaboração própria (2026), Tabela 3.7 do relatório
 :::
 
-## Pilar 1 · A queda [não é] explicada pela sazonalidade da série {data-tracker="PILAR 1 · DIAGNÓSTICO"}
+## Pilar 1 · Nas crises de segurança, as notícias demoram mais que as buscas: 39 contra 17 dias no voo 1282 {data-tracker="PILAR 1 · DIAGNÓSTICO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** decomposição em tendência, sazonalidade e resíduo<br><small>Pergunta que o gráfico responde: quais são os elementos da série?</small>
+**Exhibit:** barras pareadas, buscas × notícias, nas nove crises (voo 2059: 3 × 21 dias; voo 1282: 17 × 39 dias)<br><small>Pergunta que o gráfico responde: como as duas fontes se comparam entre si?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: Google Trends; modelagem do grupo (R)
+Fonte: Google Trends e GDELT; elaboração própria (2026)
 :::
 
 
 <!-- ================= 5 · PILAR 2 · VIABILIDADE E IMPACTO ================= -->
 
-# Quanto vale pausar frente a manter as campanhas? {data-num="02" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+# Dá para prever quando a atenção volta ao normal? {data-num="02" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
 
-Pilar 2 · Viabilidade e impacto: valor criado e variação entre os cenários.
+Pilar 2 · Viabilidade e impacto: precisão da previsão e duração da pausa.
 
 ::: chips
 <span>Diagnóstico</span><span class="on">Viabilidade e impacto</span><span>Execução e riscos</span><span>Próximos passos</span>
 :::
 
 ::: notes
-Pergunta do pilar 2. Mostrar sempre mais de um cenário, incluindo um de perda.
+Pergunta do pilar 2. A resposta mostra o modelo escolhido, o erro da data da volta e a sensibilidade da regra.
 :::
 
-## Pilar 2 · Pausar [preserva] [R$ X] de valor frente a manter, mesmo no cenário pessimista {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+## Pilar 2 · O AR(1) prevê no dia da crise quando a atenção volta, com erro médio de 4,2 dias nas crises de teste {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
 
 ::::: {.pilar .p2}
 ::: {.pilar-lado}
@@ -231,81 +241,81 @@ Pergunta do pilar 2. Mostrar sempre mais de um cenário, incluindo um de perda.
 
 <h4>Viabilidade e impacto</h4>
 
-<span class="pilar-sub">Ganhos e valor</span>
+<span class="pilar-sub">Previsão e duração da pausa</span>
 
-<span class="pilar-q">Quanto valor a solução cria e com que variação?</span>
+<span class="pilar-q">Conseguimos prever por quanto tempo pausar?</span>
 :::
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>O interesse volta ao padrão em \[h\] períodos</h4>
+<h4><span class="num">a</span>O AR(1) acompanha a queda; os modelos com diferença falham</h4>
 ::: {.bloco-visual}
-Exhibit: previsão SARIMA com intervalo de confiança
+Exhibit: voo 1282, previsão por modelo
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Pausar vale \[R$ X\] a mais que manter em \[cenário\]</h4>
+<h4><span class="num">b</span>O erro da data da volta é de 4,2 dias nas crises de teste</h4>
 ::: {.bloco-visual}
-Exhibit: cenários com probabilidade
+Exhibit: RMSE e MAE por modelo
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>A verba liberada \[gera\] \[R$ X\] de lucro econômico</h4>
+<h4><span class="num">c</span>A regra de 7 dias é prudente sem ser exagerada</h4>
 ::: {.bloco-visual}
-Exhibit: ROIC × custo de capital
+Exhibit: dias de pausa com 3, 5, 7 e 10 dias
 :::
 :::
 ::::
 :::::
 
 ::: notes
-O bloco c só entra se houver dados financeiros da Alaska (capital investido, ROIC, WACC). Sem eles, apague o bloco e o slide de exhibit correspondente. Mostrar sempre mais de um cenário, incluindo um de perda, em vez de um número único.
+O modelo foi escolhido na validação (seis crises mais antigas) e avaliado uma só vez no teste (três mais recentes). Na validação o erro médio da data da volta foi de 6,7 dias, e no teste, de 4,2. O relatório não traz dados financeiros da Alaska, por isso este pilar mostra o impacto em dias de pausa, e não em valor monetário.
 :::
 
-## Pilar 2 · O interesse por "Alaska Airlines" deve [recuperar-se] em [h] períodos {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+## Pilar 2 · No voo 1282, o AR(1) acompanha a queda da busca, e os modelos com diferença não voltam ao normal {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** previsão SARIMA com intervalos de confiança de 80% e 95%<br><small>Pergunta que o gráfico responde: o que muda daqui para frente?</small>
+**Exhibit:** painéis do voo 1282 com a previsão feita no dia 1 por modelo (AR(1), AR(2) no log, ARMA(1,1), SARIMA estacionário, SARIMA com diferença e Airline) e o intervalo contrafactual<br><small>Pergunta que o gráfico responde: como as previsões se comparam com o observado?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: Google Trends; modelo SARIMA \[(p,d,q)(P,D,Q)s\]
+Fonte: Google Trends; modelagem do grupo (R), Figura 3.11 do relatório
 :::
 
-## Pilar 2 · Em [cenário], pausar vale [R$ X] a mais do que manter as campanhas {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+## Pilar 2 · O AR(1) erra a data da volta em 4,2 dias, em média, e indica a volta em todas as 42 previsões do teste {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** valor de cada decisão (manter × ajustar × pausar) nos cenários otimista, base e pessimista, com a probabilidade de cada um<br><small>Pergunta que o gráfico responde: como os valores se comparam entre si?</small>
+**Exhibit:** barras do RMSE e do MAE dos 11 modelos nas crises de validação e de teste, com o AR(1) em destaque (RMSE de 2,08 na validação e de 2,82 no teste); o Airline e o SARIMA com diferença não preveem a volta em 39 e 21 das 42 previsões<br><small>Pergunta que o gráfico responde: como os modelos se comparam entre si?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: modelagem do grupo; premissas do grupo
+Fonte: Google Trends; modelagem do grupo (R), Tabela 3.11 do relatório
 :::
 
-## Pilar 2 · A verba liberada pela pausa [gera] [R$ X] de lucro econômico {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
+## Pilar 2 · A regra de 7 dias é a mais prudente sem ser exagerada: com 10 dias, a pane de out/2025 passa de 6 para 15 dias de pausa {data-tracker="PILAR 2 · VIABILIDADE E IMPACTO"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** retorno da campanha frente ao custo de capital<br><small>Pergunta que o gráfico responde: como os itens se comparam entre si? (só com dados financeiros)</small>
+**Exhibit:** dias de pausa em cada crise com a regra de 3, 5, 7 e 10 dias seguidos dentro do intervalo (voo 1282: dia 9 com 3 ou 5 dias e dia 17 com 7 dias; pane de out/2025: 6 dias com 7 dias e 15 dias com 10 dias) \[completar com as demais crises\]<br><small>Pergunta que o gráfico responde: como o resultado muda conforme a regra?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: \[relatórios financeiros da Alaska\]; elaboração própria
+Fonte: Google Trends; modelagem do grupo (R)
 :::
 
 
 <!-- ================= 6 · PILAR 3 · EXECUÇÃO E RISCOS ================= -->
 
-# A Alaska consegue executar a pausa e a retomada? {data-num="03" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
+# A Alaska consegue executar a regra de retomada? {data-num="03" background-image="img/transicao.png" background-size="cover" background-position="center" data-state="hide-footer"}
 
-Pilar 3 · Execução e riscos: capacidade, riscos e roadmap em fases.
+Pilar 3 · Execução e riscos: regra de decisão, riscos e gatilhos.
 
 ::: chips
 <span>Diagnóstico</span><span>Viabilidade e impacto</span><span class="on">Execução e riscos</span><span>Próximos passos</span>
@@ -315,7 +325,7 @@ Pilar 3 · Execução e riscos: capacidade, riscos e roadmap em fases.
 Pergunta do pilar 3: conseguimos realizar isso na prática?
 :::
 
-## Pilar 3 · A Alaska consegue pausar e retomar as campanhas em [N] fases, com riscos controlados {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+## Pilar 3 · A regra de retomada usa dados públicos, é refeita todo dia e tem riscos conhecidos {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
 
 ::::: {.pilar .p3}
 ::: {.pilar-lado}
@@ -332,49 +342,49 @@ Pergunta do pilar 3: conseguimos realizar isso na prática?
 
 :::: {.pilar-corpo}
 ::: {.bloco .fragment}
-<h4><span class="num">a</span>A Alaska tem capacidade para pausar e retomar</h4>
+<h4><span class="num">a</span>A regra usa dados públicos e é refeita todo dia</h4>
 ::: {.bloco-visual}
-Exhibit: contratos, equipe e monitoramento
+Exhibit: passos da regra de decisão
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">b</span>Os \[N\] riscos principais têm mitigação e dono</h4>
+<h4><span class="num">b</span>Os riscos da regra são conhecidos</h4>
 ::: {.bloco-visual}
 Exhibit: matriz de riscos
 :::
 :::
 
 ::: {.bloco .fragment}
-<h4><span class="num">c</span>A retomada em fases limita o risco</h4>
+<h4><span class="num">c</span>Promoção volta com a busca; a institucional, com as notícias</h4>
 ::: {.bloco-visual}
-Exhibit: fases e marcos de validação
+Exhibit: gatilhos por tipo de campanha
 :::
 :::
 ::::
 :::::
 
 ::: notes
-Capacidade aqui significa: contratos de mídia que podem ser pausados, equipe e agência para retomar, e dados para monitorar o interesse. Os riscos ficam só neste pilar, para os pilares serem mutuamente exclusivos.
+Capacidade aqui significa: acessar o Google Trends e o GDELT todo dia, ajustar o AR(1) e decidir por tipo de campanha. Os riscos ficam só neste pilar, para os pilares serem mutuamente exclusivos.
 :::
 
-## Pilar 3 · A Alaska tem [os contratos, a equipe e os dados] necessários para pausar e retomar {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+## Pilar 3 · A Alaska aplica a regra com dados públicos, refazendo o AR(1) todo dia a partir do dia 0 da crise {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** quadro de capacidades (contratos de mídia, equipe, dados), com o status de cada uma<br><small>Pergunta que o gráfico responde: quais são os elementos?</small>
+**Exhibit:** fluxo da regra: (1) calcular o intervalo contrafactual da busca e das notícias; (2) ajustar o AR(1) e estimar a volta, refazendo todo dia; (3) retomar a promoção e a mídia de performance quando a busca ficar 7 dias seguidos dentro do intervalo; (4) retomar a institucional pelas notícias<br><small>Pergunta que o gráfico responde: como as etapas se encadeiam?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: \[informações da empresa\]; análise do grupo
+Fonte: modelagem do grupo (R); Google Trends e GDELT
 :::
 
-## Pilar 3 · Os [N] riscos principais da pausa têm mitigação e responsável definidos {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+## Pilar 3 · Os riscos da regra são conhecidos: nove crises na amostra, índice relativo e valores próximos do limite {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** matriz de riscos (probabilidade × impacto), com a mitigação e o responsável de cada um<br><small>Pergunta que o gráfico responde: como os itens se distribuem?</small>
+**Exhibit:** matriz de riscos (probabilidade × impacto), com mitigação e responsável: amostra de nove crises (seis na validação e três no teste); Google Trends é um índice relativo cuja escala muda conforme a consulta; valores perto do limite adiam a volta (voo 1282, do dia 9 para o dia 17); notícias demoram mais que as buscas; o volume monitorado pelo GDELT caiu cerca de 74% de 2017 a 2025<br><small>Pergunta que o gráfico responde: como os riscos se distribuem?</small>
 :::
 ::::
 
@@ -382,16 +392,16 @@ Fonte: \[informações da empresa\]; análise do grupo
 Fonte: análise do grupo
 :::
 
-## Pilar 3 · A retomada em [N] fases, com marcos de validação, limita o risco da decisão {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
+## Pilar 3 · Promoção e mídia de performance voltam com a busca; a campanha institucional espera as notícias {data-tracker="PILAR 3 · EXECUÇÃO E RISCOS"}
 
 :::: {.ex}
 ::: {.bloco-visual}
-**Exhibit:** roadmap em fases (pausa, piloto de retomada, escala), com os marcos de validação e os gatilhos de revisão<br><small>Pergunta que o gráfico responde: como as etapas se encadeiam no tempo?</small>
+**Exhibit:** quadro de gatilhos por tipo de crise: panes de informática e falha do sistema de peso, de 1 a 6 dias de pausa; crises de operação e de segurança, até 19 dias nas buscas e semanas na imprensa (21 dias no voo 2059 e 39 dias no voo 1282)<br><small>Pergunta que o gráfico responde: como as etapas se encadeiam no tempo?</small>
 :::
 ::::
 
 ::: fonte
-Fonte: plano de implementação proposto pelo grupo
+Fonte: Google Trends e GDELT; plano de implementação proposto pelo grupo
 :::
 
 
@@ -409,7 +419,7 @@ Próximos passos: ações, responsáveis e prazos para os primeiros 30 dias.
 Fecha a linha-chave: se a audiência aceita as três razões, o que ela autoriza agora.
 :::
 
-## A mobilização nos primeiros 30 dias garante uma pausa ordenada e a retomada no momento certo {data-tracker="PRÓXIMOS PASSOS"}
+## Em até 90 dias, quatro ações deixam a regra de pausa e retomada pronta para a próxima crise {data-tracker="PRÓXIMOS PASSOS"}
 
 :::: {.np}
 ::: {.np-head}
@@ -418,15 +428,15 @@ Fecha a linha-chave: se a audiência aceita as três razões, o que ela autoriza
 
 ::: {.np-row .fragment}
 [Governança e PMO]{.frente}
-[Instalar o comitê de decisão e definir os ritos de acompanhamento]{.acao}
+[Aprovar a regra de decisão e nomear o comitê que a aciona no dia 0 da crise]{.acao}
 [VP \[área\]]{.resp}
 [[Dias 1–30]{.fase .f1} [◆ Gate 1]{.gate}]{.prazo}
 [1 líder dedicado]{.rec}
 :::
 
 ::: {.np-row .fragment}
-[Suspensão das campanhas]{.frente}
-[Suspender as campanhas ativas e redirecionar a verba liberada]{.acao}
+[Campanhas]{.frente}
+[Definir o que pausa no dia 0 (promoção e performance) e o que espera as notícias (institucional)]{.acao}
 [Diretor \[área\]]{.resp}
 [[Dias 1–30]{.fase .f1} [◆ Gate 1]{.gate}]{.prazo}
 [\[orçamento\]]{.rec}
@@ -434,22 +444,22 @@ Fecha a linha-chave: se a audiência aceita as três razões, o que ela autoriza
 
 ::: {.np-row .fragment}
 [Monitoramento]{.frente}
-[Entregar o painel de interesse (Yt) com limites de alerta]{.acao}
+[Entregar o painel diário de buscas e notícias, com intervalo contrafactual e AR(1) refeito todo dia]{.acao}
 [Gerente \[área\]]{.resp}
 [[Dias 30–90]{.fase .f2} [◆ Gate 2]{.gate}]{.prazo}
 [time de dados (2 pessoas)]{.rec}
 :::
 
 ::: {.np-row .fragment}
-[Retomada e comunicação]{.frente}
-[Aprovar a mensagem de retomada e o plano de reentrada das campanhas]{.acao}
+[Retomada e calibração]{.frente}
+[Retomar pela regra dos 7 dias e recalibrar o modelo a cada nova crise]{.acao}
 [Diretor \[área\]]{.resp}
 [[Escalonamento]{.fase .f3} [◆ Gate 3]{.gate}]{.prazo}
 [\[agência · verba\]]{.rec}
 :::
 
 ::: {.np-rodape .fragment}
-[FASES]{.rot} [Dias 1–30 · mobilizar]{.fase .f1} [Dias 30–90 · validar]{.fase .f2} [Escalonamento · retomar]{.fase .f3} [KPIs de acompanhamento: \[indicador 1\] · \[indicador 2\]]{.kpis}
+[FASES]{.rot} [Dias 1–30 · mobilizar]{.fase .f1} [Dias 30–90 · validar]{.fase .f2} [Escalonamento · retomar]{.fase .f3} [KPIs de acompanhamento: dias de pausa por crise · erro da data da volta (dias)]{.kpis}
 :::
 ::::
 
@@ -458,33 +468,48 @@ Fonte: plano de implementação proposto pelo grupo
 :::
 
 ::: notes
-Cada ação precisa ser um produto final verificável, com dono e prazo. O interesse de busca (Yt) é o indicador antecedente para decidir a retomada.
+Cada ação precisa ser um produto final verificável, com dono e prazo. A regra completa: promoção e mídia de performance voltam quando a busca fica 7 dias seguidos dentro do intervalo contrafactual; a campanha institucional espera o mesmo nas notícias; o ajuste é refeito todo dia.
 :::
 
 
 <!-- ================= APÊNDICE (OCULTO) ================= -->
 
-## Apêndice · Dados públicos e um pipeline reproduzível sustentam a série Yt {visibility="hidden" data-tracker="APÊNDICE"}
+## Apêndice · Dados públicos e um pipeline reproduzível sustentam as séries de busca e de notícias {visibility="hidden" data-tracker="APÊNDICE"}
 
 ```{mermaid}
 %%| fig-width: 14
 %%{init:{'theme':'base','themeVariables':{'fontSize':'22px','fontFamily':'Segoe UI, Arial','lineColor':'#4F6882'}}}%%
 graph LR
-  P["<b>Python</b><br/>download dos dados"]:::t --> D["<b>CSV bruto</b><br/>01/01/2022–23/10/2026"]:::d --> R["<b>R</b><br/>ARIMA / SARIMA"]:::t --> Q["<b>Quarto</b><br/>slides + relatório"]:::t
+  P["<b>Python</b><br/>coleta Google Trends e GDELT"]:::t --> D["<b>Série diária única</b><br/>consultas de 260 dias com período de referência comum"]:::d --> R["<b>R</b><br/>Box–Jenkins (fable)"]:::t --> Q["<b>Quarto</b><br/>slides + relatório"]:::t
   classDef t fill:#0C446B,color:#fff,stroke:#0C446B
   classDef d fill:#DCE7F1,color:#082F4A,stroke:#44ABC3
 ```
 
 | Item | Definição |
 |:--------|:-----------------------------------------------|
-| Variável Yt | Índice de interesse (0 a 100) do Google Trends para "Alaska Airlines" |
-| Alternativa | Quantidade de notícias associadas ao termo (a avaliar) |
-| Frequência · Região | \[semanal ou mensal\] · \[EUA ou mundial\] — definir |
-| Tratamento | \[faltantes, outliers e suavização\] — definir |
+| Google Trends | Índice de interesse (0 a 100) por "Alaska Airlines", EUA, categoria pesquisa na Web; diária (5.412 dias, jan/2012 a out/2026), semanal e mensal (177 meses) |
+| GDELT | Notícias com "Alaska Airlines" a cada 100 mil monitoradas, jan/2017 a out/2026 |
+| Tratamento | Dias sem informação e dias com volume abaixo de 20% da média dos 30 dias anteriores são tratados como faltantes |
+| Cuidado | A escala do Google Trends muda conforme o período consultado, por isso a série diária é construída por consultas com referência comum |
 
-## Apêndice · Estacionariedade e ACF/PACF definem as ordens candidatas do modelo [a confirmar] {visibility="hidden" data-tracker="APÊNDICE"}
+## Apêndice · O ADF rejeita a raiz unitária em todas as séries, e o KPSS rejeita a estacionariedade só nas séries semanal e diária do Google {visibility="hidden" data-tracker="APÊNDICE"}
 
 ::: panel-tabset
+### ADF e KPSS
+
+| Série | Versão | ADF | KPSS |
+|:----------------|:--------------|:------:|:----:|
+| Google, mensal | nível | −4,11\* | 0,28 |
+| Google, mensal | 1 diferença | −11,59\* | 0,03 |
+| Google, semanal | nível | −6,61\* | 0,65\* |
+| Google, semanal | 1 diferença | −25,94\* | 0,01 |
+| Google, diária | nível | −21,19\* | 2,33\* |
+| Google, diária | 1 diferença | −73,27\* | 0,00 |
+| GDELT, diária | nível | −19,37\* | 0,20 |
+| GDELT, semanal | nível | −14,54\* | 0,12 |
+
+\* rejeita H0 ao nível de 5% (valores críticos de −2,86 a −2,89 no ADF e de 0,463 no KPSS). O KPSS rejeitar nas séries semanal e diária do Google se associa à mudança de patamar na pandemia.
+
 ### ACF
 
 ```{r}
@@ -503,13 +528,6 @@ graph LR
 #| fig-height: 4.6
 ```
 
-### ADF e KPSS
-
-```{r}
-#| label: tab-adf-kpss
-#| output: asis
-```
-
 ### Decomposição
 
 ```{r}
@@ -520,22 +538,24 @@ graph LR
 ```
 :::
 
-## Apêndice · O modelo SARIMA escolhido passa no diagnóstico de resíduos [a confirmar] {visibility="hidden" data-tracker="APÊNDICE"}
+## Apêndice · Na série mensal, o modelo Airline foi escolhido por parcimônia e passa no diagnóstico de resíduos {visibility="hidden" data-tracker="APÊNDICE"}
 
 :::: {.columns}
-::: {.column width="46%"}
-| Modelo | AIC | BIC | RMSE |
-|:----------------------|:--:|:--:|:--:|
-| Candidato 1 (p,d,q)(P,D,Q)s | — | — | — |
-| Candidato 2 (p,d,q)(P,D,Q)s | — | — | — |
-| Candidato 3 (p,d,q)(P,D,Q)s | — | — | — |
-| Referência: auto.arima | — | — | — |
+::: {.column width="58%"}
+| Modelo | AIC | BIC | Ljung-Box (p) | RMSE | MAE |
+|:----------------------|:--:|:--:|:--:|:--:|:--:|
+| SARIMA(1,1,1)(0,1,1)12 | 422,6 | 430,8 | 0,157 | 7,86 | 3,87 |
+| Airline | 420,6 | 426,7 | 0,155 | 7,87 | 3,88 |
+| SARIMA(1,0,0)(1,0,0)12 | 489,5 | 498,5 | 0,581 | 9,22 | 5,61 |
+| SARIMA(0,1,1)(1,0,0)12 | 483,4 | 490,1 | 0,682 | 9,70 | 5,88 |
+| AR(1) | 489,4 | 496,2 | 0,586 | 9,97 | 6,52 |
+| ARIMA(0,1,1) | 483,3 | 487,8 | 0,652 | 11,41 | 7,87 |
 
 ::: {.callout-note appearance="minimal"}
-**Critério de escolha.** \[definir: menor AIC/BIC, resíduos como ruído branco e boa validação fora da amostra\]
+**Critério de escolha.** RMSE praticamente igual ao do SARIMA(1,1,1)(0,1,1)12 e um parâmetro a menos. Nos 24 meses do teste, todos os valores ficam dentro do intervalo de 95% (RMSE 7,31, MAE 5,45 e R² 0,21).
 :::
 :::
-::: {.column width="54%"}
+::: {.column width="42%"}
 ```{r}
 #| label: fig-residuos
 #| output: asis
@@ -545,14 +565,19 @@ graph LR
 :::
 ::::
 
-## Apêndice · Esqueleto do modelo em R {visibility="hidden" data-tracker="APÊNDICE"}
+## Apêndice · Esqueleto da previsão no dia da crise em R {visibility="hidden" data-tracker="APÊNDICE"}
 
-```{.r code-line-numbers="2-5"}
-serie  <- ts(yt$interesse, frequency = 52)
-adf.test(serie); kpss.test(serie)                       # estacionariedade
-ajuste <- Arima(serie, order = c(p, d, q), seasonal = c(P, D, Q))
-checkresiduals(ajuste)                                  # diagnóstico (Ljung-Box)
-prev   <- forecast(ajuste, h = 26, level = c(80, 95))   # previsão com IC
+```{.r code-line-numbers="2-3,5-6,8-9"}
+# 1) contrafactual: 210 dias antes da crise, SARIMA estacionário, 45 dias à frente
+cf  <- busca_antes |>
+  model(ARIMA(y ~ pdq(d = 0) + PDQ(D = 0, period = 7))) |> forecast(h = 45)
+
+# 2) em cada dia k da crise: AR(1) ajustado só com os dados até o dia k
+ar1 <- busca_ate_k |> model(AR(y ~ order(1))) |> forecast(h = 45, level = 95)
+
+# 3) volta prevista: 1º dia em que a previsão fica 7 dias seguidos
+#    abaixo do limite superior do intervalo contrafactual
+volta <- primeiro_dia_com_sequencia(ar1, limite_sup(cf), dias = 7)
 ```
 
 
