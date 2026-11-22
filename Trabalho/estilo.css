@@ -579,3 +579,65 @@
 .reveal section[data-num] h1{font-size:2.3em; width:62%}
 .reveal section[data-num] .chips p{display:contents; width:auto}
 .chips span.on{background:var(--ciano); border-color:var(--ciano); color:var(--navy-deep); font-weight:700}
+
+/* ===== Exhibits: imagem, painel lateral e tabela ===== */
+.reveal .ex{display:flex; height:600px; margin-top:20px}
+.reveal .ex.com-lado{display:grid; grid-template-columns:1fr 330px; gap:28px}
+.reveal .ex .bloco-visual{margin:0; font-size:1em; line-height:1.5}
+.reveal .ex table{font-size:.8em; width:100%; align-self:flex-start}
+
+.reveal .bloco-visual.img{position:relative; padding:0; border:1px solid var(--azul-claro); background:#fff; overflow:hidden}
+.reveal .bloco-visual.img figure,
+.reveal .bloco-visual.img .quarto-figure,
+.reveal .bloco-visual.img p{margin:0}
+.reveal .bloco-visual.img img{
+  position:absolute; inset:0; width:100%; height:100%; margin:0; padding:10px; box-sizing:border-box;
+  object-fit:contain; max-width:none; max-height:none; border:0; box-shadow:none; background:#fff;
+}
+
+.reveal .ex-lado{
+  display:flex; flex-direction:column; justify-content:center; gap:34px; padding:30px 32px;
+  border-radius:14px; background:var(--tint); border-top:7px solid var(--azul);
+  font-size:.72em; line-height:1.35; box-shadow:var(--sombra-card);
+}
+.reveal .ex-lado p{display:flex; flex-direction:column; align-items:flex-start; gap:6px; margin:0; color:var(--cinza)}
+.reveal .ex-lado .n{font:700 2.4em var(--serif); line-height:1; color:var(--navy)}
+
+.reveal .panel-tabset .tab-content img{max-height:540px; width:auto; max-width:100%; display:block; margin:0 auto; border:0; box-shadow:none}
+
+
+/* =====================================================================
+   17. ORGANIZAÇÃO PELO MÉTODO MINTO / McKINSEY
+   Número de destaque nos pilares, "e daí?" em cada exhibit e
+   exhibits em coluna (tabela ou diagrama + faixa de conclusão)
+   ===================================================================== */
+
+/* número de destaque nos blocos de abertura do pilar */
+.reveal .bloco-dado{
+  flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:14px; text-align:center; border-radius:10px; background:#fff; border:1px solid var(--azul-claro);
+}
+.reveal .bloco-dado p{display:flex; flex-direction:column; align-items:center; gap:10px; margin:0}
+.reveal .bloco-dado .num-g{font:700 2.9em var(--serif); line-height:1; color:var(--navy)}
+.reveal .bloco-dado .leg{font-size:.82em; line-height:1.3; color:var(--cinza)}
+
+/* "e daí?" no painel lateral dos exhibits com imagem */
+.reveal .ex-lado .sowhat{margin-top:auto; padding-top:22px; border-top:2px solid var(--azul-claro)}
+.reveal .ex-lado .sowhat p{display:block; margin:0; font-weight:700; line-height:1.35; color:var(--navy)}
+.reveal .ex-lado .sowhat p::before{
+  content:"E DAÍ?"; display:block; margin-bottom:6px;
+  font:700 .72em var(--sans); letter-spacing:.16em; color:var(--azul);
+}
+
+/* exhibit em coluna: tabela ou diagrama + faixa de conclusão */
+.reveal .ex.col{flex-direction:column; gap:26px}
+.reveal .ex.col table{font-size:.72em; flex:0 0 auto}
+.reveal .ex.col.poucas table{font-size:.95em}
+.reveal .ex.col.poucas table th,
+.reveal .ex.col.poucas table td{padding:20px 18px}
+.reveal .sowhat-faixa{
+  margin-top:auto; padding:18px 32px; border-radius:12px; color:#fff;
+  background:var(--grad-navy); box-shadow:var(--sombra-destaque);
+}
+.reveal .sowhat-faixa p{display:flex; align-items:center; gap:26px; margin:0; font-size:.8em; line-height:1.35}
+.reveal .sowhat-faixa .rot{font:700 .68em var(--sans); letter-spacing:.16em; color:var(--tan); white-space:nowrap}

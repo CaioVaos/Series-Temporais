@@ -1,0 +1,21 @@
+{
+  "janela_normal": 210,
+  "janela_excesso": 28,
+  "horizonte_crise": 45,
+  "dias_volta": 7,
+  "dias_decisao": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "dia_previsao": 2,
+  "media_movel_dias": 7,
+  "media_movel_meses": 3,
+  "largura_grafico": 12,
+  "altura_grafico": 7,
+  "dpi_grafico": 600
+}
